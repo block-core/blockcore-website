@@ -9,6 +9,7 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { PlatformComponent } from './platform/platform.component';
 import { TeamComponent } from './team/team.component';
+import { ChainsComponent } from './chains/chains.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TeamComponent } from './team/team.component';
     NavMenuComponent,
     HomeComponent,
     PlatformComponent,
-    TeamComponent
+    TeamComponent,
+    ChainsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -25,6 +27,7 @@ import { TeamComponent } from './team/team.component';
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'platform', component: PlatformComponent },
+      { path: 'chains', component: ChainsComponent },
       { path: 'team', component: TeamComponent },
     ])
   ],

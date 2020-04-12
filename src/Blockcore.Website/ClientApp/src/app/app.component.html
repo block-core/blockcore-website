@@ -7,32 +7,11 @@
 
 
 <body>
+
+   <app-nav-menu></app-nav-menu>
+
    <div class="content">
-      <div class="grid-container">
-         <div class="logo-container">
-            <img class="logo" src="assets/logo-symbol.png">
-         </div>
-         <div class="content-container">
-            <h1 class="title1">Blockcore // Build Blockchains</h1>
-            <h2 class="title2">
-               Blockcore is a platform that enables you to build your own blockchains.
-            </h2>
-            <p>
-               Blockcore is the foundation for realizing blockchains and includes core functionality to create your own custom blockchain with a lot of tooling supporting your blockchain.
-            </p>
-            <p>
-               The tooling as part of the Blockcore platform includes; Block Explorer, Block Indexing, Block Analytics, Wallets, API Wallet Service, Developer Tooling, Documentation and more.
-            </p>
-            <p>
-               Blockcore is under continuous development to stay at the cutting edge of Bitcoin and blockchain technology.   
-               We invite you to engage with our community on our <a href="https://discord.gg/xa5BxWr">Discord</a>.
-            </p>
-            <p>
-               <br>
-               <a class="btn" href="https://github.com/block-core">Source Code</a>
-            </p>
-         </div>
-      </div>
+      <router-outlet></router-outlet>
    </div>
 
    <div class="footer">
@@ -40,7 +19,8 @@
          <div class="footer-left">
             <h3>About</h3>
             <p>
-               Blockcore is an open source project started by a group of blockchain developers and engineers to realize a fully integrated platform for building custom blockchains.
+               Blockcore is an open source project started by a group of blockchain developers and engineers to realize
+               a fully integrated platform for building custom blockchains.
             </p>
          </div>
          <div class="footer-right">

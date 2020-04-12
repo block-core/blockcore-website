@@ -1,18 +1,33 @@
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+.navbar {
+  display: flex;
+  align-items: center;
 }
 
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.navbar-logo {
+  width: 64px;
+  padding: 10px 0px 4px 20px;
 }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+.nav-link {
+  text-decoration: none;
+  color: #17bebb;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.link-active .nav-link {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-nav {
+  display: inline-block;
+  font-size: 1.4em;
+}
+
+.navbar-nav li {
+  display: inline-block;
+  margin-right: 20px;
 }

@@ -27,9 +27,12 @@ body {
 }
 
 h1,
-h2,
-h3 {
+h2 {
   font-weight: 300;
+}
+
+h3 {
+  font-weight: 600;
 }
 
 h1 {
@@ -137,6 +140,27 @@ a:hover.btn {
 
 ul {
   list-style-type: square;
+}
+
+.sponsor-widget a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsor-widget img {
+  width: 200px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  box-shadow: 0px 0px 0px 2px #17bebb;
+  transition: box-shadow 0.25s linear;
+  margin: 0.5em;
+}
+
+.sponsor-widget img:hover {
+  box-shadow: 0px 0px 0px 6px #17bebb;
+  transition: box-shadow 0.25s linear;
 }
 
 @media only screen and (max-width: 60em) {

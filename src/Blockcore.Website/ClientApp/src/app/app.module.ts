@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { PlatformComponent } from './platform/platform.component';
-import { TeamComponent } from './team/team.component';
+import { AboutComponent } from './about/about.component';
 import { ChainsComponent } from './chains/chains.component';
 
 @NgModule({
@@ -17,7 +17,7 @@ import { ChainsComponent } from './chains/chains.component';
     NavMenuComponent,
     HomeComponent,
     PlatformComponent,
-    TeamComponent,
+    AboutComponent,
     ChainsComponent
   ],
   imports: [
@@ -28,7 +28,8 @@ import { ChainsComponent } from './chains/chains.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'platform', component: PlatformComponent },
       { path: 'chains', component: ChainsComponent },
-      { path: 'team', component: TeamComponent },
+      { path: 'team', component: AboutComponent }, // Backward compatible website URL.
+      { path: 'about', component: AboutComponent },
     ])
   ],
   providers: [],

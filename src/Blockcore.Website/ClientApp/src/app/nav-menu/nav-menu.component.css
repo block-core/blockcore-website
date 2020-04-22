@@ -1,6 +1,5 @@
 .navbar {
   display: flex;
-  /* align-items: center; */
   color: #2e2e2e;
   
   background-image: url('/assets/top-background.png');
@@ -8,8 +7,6 @@
   border-top: 19px solid #2e2e2e;
   height: 366px;
 }
-
-
 
 .nav-link {
   text-decoration: none;

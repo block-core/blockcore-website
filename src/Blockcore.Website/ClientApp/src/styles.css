@@ -1,22 +1,7 @@
-/*a {
-  color: #0366d6;
-}
-
-code {
-  color: #e01a76;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}*/
-
 html {
   font-size: 22px;
   color: #2e2e2e;
   font-family: "Raleway", sans-serif;
-  /* background-color: #1f1f1f; */
 }
 
 html,
@@ -36,7 +21,6 @@ h3 {
 }
 
 h1 {
-  font-family: "Bebas Neue", cursive;
   font-family: "Manrope", sans-serif;
   font-size: 3em;
   margin-top: 0;
@@ -52,15 +36,6 @@ h2 {
   position: relative;
 }
 
-/* .accent::after {
-  content: "";
-  display: block;
-  width: 220px;
-  background-color: #e4572e;
-  height: 8px;
-  border-bottom: 10px solid #e4572e;
-} */
-
 .accent:before {
   position: absolute;
   content: "";
@@ -70,17 +45,8 @@ h2 {
   left: 0;
   right: 0;
   width: 100%;
-  /* background: RGBA(255, 204, 81, 0.75); */
   background: RGBA(243, 182, 35, 0.72);
 }
-
-/* .accent:before {
-  content: "";
-  display: block;
-  width: 220px;
-  background-color: #e1e1e1;
-  height: 8px;
-} */
 
 .loading-text {
   color: white;
@@ -135,7 +101,6 @@ a:hover {
   right: 0;
   width: 100%;
   background: #2e2e2e;
-  /* background: RGBA(255, 204, 81, 0.75); */
 }
 
 .link:hover:before {
@@ -148,7 +113,6 @@ a:hover {
   right: 0;
   width: 100%;
   background: #f3b623;
-  /* background: RGBA(255, 204, 81, 0.75); */
 }
 
 .btn {
@@ -292,7 +256,7 @@ ul {
     display: block;
     float: left;
     width: 100%;
-    padding: 5px;
+    margin-right: 20px;
   }
 
   html {
@@ -312,12 +276,52 @@ ul {
     display: block;
   }
 
-  /* .grid-container-footer {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "footer-left footer-right";
-  } */
+  .footer-left {
+    padding-left: 2em;
+    grid-area: footer-left;
+  }
+
+  .footer-right {
+    padding-left: 2em;
+    grid-area: footer-right;
+  }
+
+  .navbar-nav {
+    padding-top: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media only screen and (max-width: 22em) {
+
+  .navbar-logo {
+    width: 80px;
+    padding: 66px 0px 0px 30px;
+  }
+
+  .nav-item {
+    display: block;
+    float: left;
+    width: 100%;
+    margin-right: 10px;
+  }
+
+  html {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 2.4em;
+  }
+
+  .content {
+    padding: 0 2em 1em 2em;
+    background-color: white;
+  }
+
+  .grid-container {
+    display: block;
+  }
 
   .footer-left {
     padding-left: 2em;

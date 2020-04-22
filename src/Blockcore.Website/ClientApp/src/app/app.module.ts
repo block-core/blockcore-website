@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { PlatformComponent } from './platform/platform.component';
 import { AboutComponent } from './about/about.component';
 import { ChainsComponent } from './chains/chains.component';
+import { SponsorsComponent } from './sponsors/sponsors.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ChainsComponent } from './chains/chains.component';
     HomeComponent,
     PlatformComponent,
     AboutComponent,
+    SponsorsComponent,
     ChainsComponent
   ],
   imports: [
@@ -28,6 +30,7 @@ import { ChainsComponent } from './chains/chains.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'platform', component: PlatformComponent },
       { path: 'chains', component: ChainsComponent },
+      { path: 'sponsors', component: SponsorsComponent },
       { path: 'team', component: AboutComponent }, // Backward compatible website URL.
       { path: 'about', component: AboutComponent },
     ])

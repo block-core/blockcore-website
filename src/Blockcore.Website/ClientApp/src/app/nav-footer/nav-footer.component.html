@@ -1,4 +1,4 @@
-<div class="footer">
+<div class="footer footer-background">
    <div class="grid-container-footer">
       <div class="footer-left">
          <p>
@@ -13,9 +13,10 @@
          </p>
       </div>
       <div class="footer-toggle">
-         <div class="switcher">
-            <input type="checkbox" id="switcher" (click)="toggle()" />
-            <label for="switcher"></label>
+
+         <div class="mode-toggle">
+            <input type="checkbox" id="switch" name="mode" (click)="toggle()">
+            <label for="switch"></label>
          </div>
       </div>
    </div>

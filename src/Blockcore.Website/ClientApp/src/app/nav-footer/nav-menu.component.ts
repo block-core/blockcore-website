@@ -22,6 +22,8 @@ export class NavFooterComponent {
       } else {
          localStorage.setItem('dark-mode', 'off');
       }
+
+      this.updateMode();
    }
 
    toggle() {
@@ -42,8 +44,6 @@ export class NavFooterComponent {
    }
 
    updateMode() {
-
-
       if (this.darkMode) {
          this.renderer.setAttribute(document.documentElement, 'data-theme', 'dark'); //  .addClass(document.body, 'dark');
       } else {

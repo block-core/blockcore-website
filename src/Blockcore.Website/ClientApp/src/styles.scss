@@ -29,6 +29,10 @@ html[data-theme="dark"] {
   --mode-filter: invert(100%);
 }
 
+.mode-aware {
+  filter: var(--mode-filter);
+}
+
 // Used for transition of UI when toggling, we'll quickly swithc now to avoid delay.
 // html.transition,
 // html.transition *,
@@ -348,7 +352,7 @@ ul {
 }
 
 .mode-toggle input:checked + label {
-  background: var(--footer-background);
+  background: var(--footer-foreground);
 }
 
 .mode-toggle input:checked + label:after {

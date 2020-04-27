@@ -11,11 +11,13 @@ import { PlatformComponent } from './platform/platform.component';
 import { AboutComponent } from './about/about.component';
 import { ChainsComponent } from './chains/chains.component';
 import { SponsorsComponent } from './sponsors/sponsors.component';
+import { NavFooterComponent } from './nav-footer/nav-menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
+    NavFooterComponent,
     HomeComponent,
     PlatformComponent,
     AboutComponent,

@@ -13,12 +13,10 @@
          </p>
       </div>
       <div class="footer-toggle">
-         
-         <a (click)="toggle()" class="dark-mode-toggle">
-            <span *ngIf="darkMode">Light <i class="fas fa-toggle-on"></i></span>
-            <span *ngIf="!darkMode">Dark <i class="fas fa-toggle-off"></i></span>
-         </a>
-
+         <div class="switcher">
+            <input type="checkbox" id="switcher" (click)="toggle()" />
+            <label for="switcher"></label>
+         </div>
       </div>
    </div>
 </div>

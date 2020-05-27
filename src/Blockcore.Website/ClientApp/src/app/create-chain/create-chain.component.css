@@ -1,0 +1,56 @@
+.config-form {
+   
+}
+
+.config-form input {
+   font-size: 1.1em;
+   padding: 0.4em 0.3em;
+   width: 100%;
+}
+
+.config-form textarea {
+   font-size: 0.8em;
+   padding: 0.4em 0.3em;
+   width: 100%;
+}
+
+.config-form select {
+   font-size: 1.2em;
+   padding: 0.3em;
+}
+
+.config-form button {
+   font-size: 1.2em;
+   padding: 0.3em;
+}
+
+.config-form option {
+   padding: 0.3em;
+}
+
+.config-form label {
+   margin-bottom: 0.2em;
+   display: inline-block;
+}
+
+pre {
+   background: #f4f4f4;
+   border: 1px solid #ddd;
+   border-left: 3px solid var(--accent);
+   color: #666;
+   page-break-inside: avoid;
+   font-family: monospace;
+   font-size: 15px;
+   line-height: 1.6;
+   margin-bottom: 1.6em;
+   max-width: 100%;
+   overflow: auto;
+   padding: 1em 1.5em;
+   display: block;
+   word-wrap: break-word;
+}
+
+.warning {
+   display: inline-block;
+   color: maroon;
+}

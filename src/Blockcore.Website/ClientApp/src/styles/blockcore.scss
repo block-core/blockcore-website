@@ -243,6 +243,10 @@ ul {
   filter: var(--mode-filter);
 }
 
+.nav-item {
+  color: var(--background-alternative);
+}
+
 .nav-link {
   text-decoration: none;
   color: var(--background-alternative);

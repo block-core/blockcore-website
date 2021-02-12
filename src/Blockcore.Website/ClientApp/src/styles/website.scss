@@ -1,1 +1,15 @@
 @import 'variables';
+
+.thumbnail {
+    max-width: 175px;
+    float: right;  
+    margin: 8px; 
+    border: 2px solid silver;
+}
+
+.thumbnail-large {
+    max-width: 250px;
+    float: right;  
+    margin: 8px; 
+    border: 2px solid silver;
+}

@@ -1,0 +1,30 @@
+html {
+   background: var(--background);
+ 
+   --background: white;
+   --background-alternative: #2e2e2e;
+   --foreground: #2e2e2e;
+   --foreground-alternative: #969696;
+ 
+   --footer-background: #1f1f1f;
+   --footer-foreground: #969696;
+   --accent: #f3b623;
+ 
+ }
+ 
+ html[data-theme="dark"] {
+   background: var(--background);
+ 
+   --background: black;
+   --background-alternative: #2e2e2e;
+ 
+   --foreground: #f9f9f9;
+   --foreground-alternative: #969696;
+ 
+   --footer-background: #d1d1d1;
+   --footer-foreground: #2e2e2e;
+ 
+   --accent: #f3b623;
+ 
+   --mode-filter: invert(100%);
+ }

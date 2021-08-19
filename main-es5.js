@@ -74,7 +74,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       selectors: [["app-about"]],
       decls: 91,
       vars: 0,
-      consts: [["href", "https://discord.gg/fs4zjKcyTx"], ["href", "mailto:post@blockcore.net"], ["src", "assets/blockcore-256x256.png", 1, "mode-aware"], ["href", "assets/blockcore-256x256.png"], ["href", "assets/blockcore-512x512.png"], ["href", "assets/blockcore-1024x1024.png"], ["href", "assets/blockcore-light-256x256.png"], ["href", "assets/blockcore-light-512x512.png"], ["href", "assets/blockcore-light-1024x1024.png"], ["href", "assets/blockcore.svg"], ["href", "assets/blockcore-small.png"], ["href", "assets/blockcore.png"], ["href", "assets/blockcore-large.png"], ["href", "assets/blockcore-light-small.png"], ["href", "assets/blockcore-light.png"], ["href", "assets/blockcore-light-large.png"], ["href", "assets/favicon.ico"], ["href", "assets/blockcore.ico"], ["href", "assets/blockcore-banner-728x90.png"], ["href", "assets/blockcore-banner-300x600.png"]],
+      consts: [["href", "https://www.blockcore.net/discord"], ["href", "mailto:post@blockcore.net"], ["src", "assets/blockcore-256x256.png", 1, "mode-aware"], ["href", "assets/blockcore-256x256.png"], ["href", "assets/blockcore-512x512.png"], ["href", "assets/blockcore-1024x1024.png"], ["href", "assets/blockcore-light-256x256.png"], ["href", "assets/blockcore-light-512x512.png"], ["href", "assets/blockcore-light-1024x1024.png"], ["href", "assets/blockcore.svg"], ["href", "assets/blockcore-small.png"], ["href", "assets/blockcore.png"], ["href", "assets/blockcore-large.png"], ["href", "assets/blockcore-light-small.png"], ["href", "assets/blockcore-light.png"], ["href", "assets/blockcore-light-large.png"], ["href", "assets/favicon.ico"], ["href", "assets/blockcore.ico"], ["href", "assets/blockcore-banner-728x90.png"], ["href", "assets/blockcore-banner-300x600.png"]],
       template: function AboutComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "h1");
@@ -583,6 +583,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _create_chain_create_chain_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
     /*! ./create-chain/create-chain.component */
     "./src/app/create-chain/create-chain.component.ts");
+    /* harmony import */
+
+
+    var _discord_discord_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+    /*! ./discord/discord.component */
+    "./src/app/discord/discord.component.ts");
 
     var AppModule = function AppModule() {
       _classCallCheck(this, AppModule);
@@ -612,6 +618,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         path: 'create-chain',
         component: _create_chain_create_chain_component__WEBPACK_IMPORTED_MODULE_13__["CreateChainComponent"]
+      }, {
+        path: 'discord',
+        component: _discord_discord_component__WEBPACK_IMPORTED_MODULE_14__["DiscordComponent"]
       }, {
         path: 'sponsors',
         component: _sponsors_sponsors_component__WEBPACK_IMPORTED_MODULE_11__["SponsorsComponent"]
@@ -653,6 +662,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }, {
             path: 'create-chain',
             component: _create_chain_create_chain_component__WEBPACK_IMPORTED_MODULE_13__["CreateChainComponent"]
+          }, {
+            path: 'discord',
+            component: _discord_discord_component__WEBPACK_IMPORTED_MODULE_14__["DiscordComponent"]
           }, {
             path: 'sponsors',
             component: _sponsors_sponsors_component__WEBPACK_IMPORTED_MODULE_11__["SponsorsComponent"]
@@ -2454,6 +2466,71 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./src/app/discord/discord.component.ts":
+  /*!**********************************************!*\
+    !*** ./src/app/discord/discord.component.ts ***!
+    \**********************************************/
+
+  /*! exports provided: DiscordComponent */
+
+  /***/
+  function srcAppDiscordDiscordComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "DiscordComponent", function () {
+      return DiscordComponent;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+    var DiscordComponent = function DiscordComponent() {
+      _classCallCheck(this, DiscordComponent);
+
+      window.location.href = 'https://discord.gg/fs4zjKcyTx';
+    };
+
+    DiscordComponent.ɵfac = function DiscordComponent_Factory(t) {
+      return new (t || DiscordComponent)();
+    };
+
+    DiscordComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+      type: DiscordComponent,
+      selectors: [["app-discord"]],
+      decls: 1,
+      vars: 0,
+      template: function DiscordComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, "Redirect to Discord...");
+        }
+      },
+      encapsulation: 2
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](DiscordComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+          selector: 'app-discord',
+          templateUrl: './discord.component.html'
+        }]
+      }], function () {
+        return [];
+      }, null);
+    })();
+    /***/
+
+  },
+
+  /***/
   "./src/app/home/home.component.ts":
   /*!****************************************!*\
     !*** ./src/app/home/home.component.ts ***!
@@ -2498,7 +2575,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       selectors: [["app-home"]],
       decls: 22,
       vars: 0,
-      consts: [[1, "title1"], [1, "accent"], ["routerLink", "/platform"], ["href", "https://discord.gg/fs4zjKcyTx"], ["href", "https://github.com/block-core", 1, "link"]],
+      consts: [[1, "title1"], [1, "accent"], ["routerLink", "/platform"], ["href", "https://www.blockcore.net/discord"], ["href", "https://github.com/block-core", 1, "link"]],
       template: function HomeComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "h1", 0);
@@ -2676,7 +2753,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       selectors: [["app-nav-footer"]],
       decls: 17,
       vars: 1,
-      consts: [[1, "footer", "footer-background"], [1, "grid-container-footer"], [1, "footer-left"], [1, "footer-right"], [1, "icon-links"], ["href", "https://www.github.com/block-core/"], [1, "fab", "fa-github"], ["href", "https://discord.gg/fs4zjKcyTx"], [1, "fab", "fa-discord"], ["href", "https://twitter.com/blockcoredev"], [1, "fab", "fa-twitter"], [1, "footer-toggle"], [1, "mode-toggle"], ["type", "checkbox", "id", "switch", "name", "mode", 3, "ngModel", "ngModelChange"], ["for", "switch"]],
+      consts: [[1, "footer", "footer-background"], [1, "grid-container-footer"], [1, "footer-left"], [1, "footer-right"], [1, "icon-links"], ["href", "https://www.github.com/block-core/"], [1, "fab", "fa-github"], ["href", "/discord"], [1, "fab", "fa-discord"], ["href", "https://twitter.com/blockcoredev"], [1, "fab", "fa-twitter"], [1, "footer-toggle"], [1, "mode-toggle"], ["type", "checkbox", "id", "switch", "name", "mode", 3, "ngModel", "ngModelChange"], ["for", "switch"]],
       template: function NavFooterComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);

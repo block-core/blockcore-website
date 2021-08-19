@@ -22,6 +22,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
+              "src/404.html",
               "src/assets",
               "src/.well-known/did.json",
               "src/.well-known/did-configuration.json"

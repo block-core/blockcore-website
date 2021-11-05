@@ -3379,9 +3379,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     SponsorsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
       type: SponsorsComponent,
       selectors: [["app-sponsors"]],
-      decls: 35,
+      decls: 37,
       vars: 0,
-      consts: [["href", "https://opencollective.com/blockcore"], ["href", "https://gitcoin.co/grants/1172/the-blockcore-fund"], ["href", "mailto:post@blockcore.net"], [1, "sponsor-widget"], ["href", "https://github.com/sponsors/sondreb"], ["src", "https://avatars1.githubusercontent.com/u/309938?s=180&u=c82ed1827100905dc561460fdfc68ca463b29194&v=4"]],
+      consts: [["href", "https://opencollective.com/blockcore"], ["href", "https://gitcoin.co/grants/1172/the-blockcore-fund"], ["href", "mailto:post@blockcore.net"], ["href", "https://www.stratisplatform.com/decentralized-accelerator/"], ["href", "https://www.coinvault.io"]],
       template: function SponsorsComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "h1");
@@ -3466,27 +3466,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "h3");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "h2");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](28, "Individual sponsor support");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](28, "Funding");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "p");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, "You also have the option of providing support to the individuals working on Blockcore. Not everyone in the group have a sponsor service available, but those who do is listed below:");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, "October 2021 a team of Blockcore-members received funding from the ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "a", 3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](32, "Stratis Decentralized Accelerator");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "div", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, " to develop ");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "a", 4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "a", 4);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](33, "img", 5);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](34, " Sondre Bjell\xE5s ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](35, "CoinVault");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](36, ", a browser extension based wallet for Stratis and Cirrus blockchain.");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }

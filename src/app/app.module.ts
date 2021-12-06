@@ -14,6 +14,7 @@ import { SponsorsComponent } from './sponsors/sponsors.component';
 import { NavFooterComponent } from './nav-footer/nav-menu.component';
 import { CreateChainComponent } from './create-chain/create-chain.component';
 import { DiscordComponent } from './discord/discord.component';
+import { PolicyComponent } from './policy/policy.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { DiscordComponent } from './discord/discord.component';
     NavFooterComponent,
     HomeComponent,
     PlatformComponent,
+    PolicyComponent,
     AboutComponent,
     SponsorsComponent,
     ChainsComponent,
@@ -37,6 +39,7 @@ import { DiscordComponent } from './discord/discord.component';
       { path: 'chains', component: ChainsComponent },
       { path: 'create-chain', component: CreateChainComponent },
       { path: 'discord', component: DiscordComponent },
+      { path: 'policy', component: PolicyComponent },
       { path: 'sponsors', component: SponsorsComponent },
       { path: 'team', component: AboutComponent }, // Backward compatible website URL.
       { path: 'about', component: AboutComponent },

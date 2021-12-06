@@ -9,7 +9,7 @@ html {
   --accent: #f3b623;
 }
 
-html[data-theme="dark"] {
+html[data-theme=dark] {
   background: var(--background);
   --background: black;
   --background-alternative: #2e2e2e;
@@ -306,7 +306,7 @@ ul {
   flex-direction: row-reverse;
 }
 
-.mode-toggle input[type="checkbox"] {
+.mode-toggle input[type=checkbox] {
   height: 0;
   width: 0;
   visibility: hidden;
@@ -351,16 +351,20 @@ ul {
     width: 80px;
     padding: 66px 0px 0px 72px;
   }
+
   html {
     font-size: 20px;
   }
+
   .content {
     padding: 0 3em 1em 3em;
   }
+
   .footer-left {
     padding-left: 3em;
     grid-area: footer-left;
   }
+
   .footer-right {
     padding-left: 3em;
     grid-area: footer-right;
@@ -374,26 +378,33 @@ ul {
     width: 100%;
     margin-right: 20px;
   }
+
   html {
     font-size: 18px;
   }
+
   h1 {
     font-size: 2.4em;
   }
+
   .content {
     padding: 0 2em 1em 2em;
   }
+
   .grid-container {
     display: block;
   }
+
   .footer-left {
     padding-left: 2em;
     grid-area: footer-left;
   }
+
   .footer-right {
     padding-left: 2em;
     grid-area: footer-right;
   }
+
   .navbar-nav {
     padding-top: 40px;
     padding-right: 40px;
@@ -405,32 +416,40 @@ ul {
     width: 80px;
     padding: 66px 0px 0px 30px;
   }
+
   .nav-item {
     display: block;
     float: left;
     width: 100%;
     margin-right: 10px;
   }
+
   html {
     font-size: 18px;
   }
+
   h1 {
     font-size: 2.4em;
   }
+
   .content {
     padding: 0 2em 1em 2em;
   }
+
   .grid-container {
     display: block;
   }
+
   .footer-left {
     padding-left: 2em;
     grid-area: footer-left;
   }
+
   .footer-right {
     padding-left: 2em;
     grid-area: footer-right;
   }
+
   .navbar-nav {
     padding-top: 40px;
     padding-right: 40px;
@@ -448,7 +467,7 @@ html {
   --accent: #f3b623;
 }
 
-html[data-theme="dark"] {
+html[data-theme=dark] {
   background: var(--background);
   --background: black;
   --background-alternative: #2e2e2e;
@@ -473,4 +492,3 @@ html[data-theme="dark"] {
   margin: 8px;
   border: 2px solid silver;
 }
-

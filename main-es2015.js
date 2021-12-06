@@ -274,6 +274,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _nav_footer_nav_menu_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./nav-footer/nav-menu.component */ "./src/app/nav-footer/nav-menu.component.ts");
 /* harmony import */ var _create_chain_create_chain_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./create-chain/create-chain.component */ "./src/app/create-chain/create-chain.component.ts");
 /* harmony import */ var _discord_discord_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./discord/discord.component */ "./src/app/discord/discord.component.ts");
+/* harmony import */ var _policy_policy_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./policy/policy.component */ "./src/app/policy/policy.component.ts");
+
 
 
 
@@ -305,6 +307,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                 { path: 'chains', component: _chains_chains_component__WEBPACK_IMPORTED_MODULE_10__["ChainsComponent"] },
                 { path: 'create-chain', component: _create_chain_create_chain_component__WEBPACK_IMPORTED_MODULE_13__["CreateChainComponent"] },
                 { path: 'discord', component: _discord_discord_component__WEBPACK_IMPORTED_MODULE_14__["DiscordComponent"] },
+                { path: 'policy', component: _policy_policy_component__WEBPACK_IMPORTED_MODULE_15__["PolicyComponent"] },
                 { path: 'sponsors', component: _sponsors_sponsors_component__WEBPACK_IMPORTED_MODULE_11__["SponsorsComponent"] },
                 { path: 'team', component: _about_about_component__WEBPACK_IMPORTED_MODULE_9__["AboutComponent"] },
                 { path: 'about', component: _about_about_component__WEBPACK_IMPORTED_MODULE_9__["AboutComponent"] },
@@ -315,6 +318,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
         _nav_footer_nav_menu_component__WEBPACK_IMPORTED_MODULE_12__["NavFooterComponent"],
         _home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"],
         _platform_platform_component__WEBPACK_IMPORTED_MODULE_8__["PlatformComponent"],
+        _policy_policy_component__WEBPACK_IMPORTED_MODULE_15__["PolicyComponent"],
         _about_about_component__WEBPACK_IMPORTED_MODULE_9__["AboutComponent"],
         _sponsors_sponsors_component__WEBPACK_IMPORTED_MODULE_11__["SponsorsComponent"],
         _chains_chains_component__WEBPACK_IMPORTED_MODULE_10__["ChainsComponent"],
@@ -329,6 +333,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                     _nav_footer_nav_menu_component__WEBPACK_IMPORTED_MODULE_12__["NavFooterComponent"],
                     _home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"],
                     _platform_platform_component__WEBPACK_IMPORTED_MODULE_8__["PlatformComponent"],
+                    _policy_policy_component__WEBPACK_IMPORTED_MODULE_15__["PolicyComponent"],
                     _about_about_component__WEBPACK_IMPORTED_MODULE_9__["AboutComponent"],
                     _sponsors_sponsors_component__WEBPACK_IMPORTED_MODULE_11__["SponsorsComponent"],
                     _chains_chains_component__WEBPACK_IMPORTED_MODULE_10__["ChainsComponent"],
@@ -344,6 +349,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                         { path: 'chains', component: _chains_chains_component__WEBPACK_IMPORTED_MODULE_10__["ChainsComponent"] },
                         { path: 'create-chain', component: _create_chain_create_chain_component__WEBPACK_IMPORTED_MODULE_13__["CreateChainComponent"] },
                         { path: 'discord', component: _discord_discord_component__WEBPACK_IMPORTED_MODULE_14__["DiscordComponent"] },
+                        { path: 'policy', component: _policy_policy_component__WEBPACK_IMPORTED_MODULE_15__["PolicyComponent"] },
                         { path: 'sponsors', component: _sponsors_sponsors_component__WEBPACK_IMPORTED_MODULE_11__["SponsorsComponent"] },
                         { path: 'team', component: _about_about_component__WEBPACK_IMPORTED_MODULE_9__["AboutComponent"] },
                         { path: 'about', component: _about_about_component__WEBPACK_IMPORTED_MODULE_9__["AboutComponent"] },
@@ -1686,6 +1692,62 @@ PlatformComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefine
         args: [{
                 selector: 'app-platform-component',
                 templateUrl: './platform.component.html'
+            }]
+    }], null, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/policy/policy.component.ts":
+/*!********************************************!*\
+  !*** ./src/app/policy/policy.component.ts ***!
+  \********************************************/
+/*! exports provided: PolicyComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PolicyComponent", function() { return PolicyComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+
+class PolicyComponent {
+}
+PolicyComponent.ɵfac = function PolicyComponent_Factory(t) { return new (t || PolicyComponent)(); };
+PolicyComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PolicyComponent, selectors: [["app-policy"]], decls: 18, vars: 0, template: function PolicyComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "h1");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Blockcore /// Policy");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "h3");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "Blockcore Extension / CoinVault");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "This software is provided with no warranty.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "Blockcore does not currently collect any information about you as a person. This can change in the future, with new features available. A change to the privacy policy, will be announced.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "Whenever you perform transactions, the transactions is store on a public chain of blocks (blockchain). You can never remove this information, they are locked in the chain.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11, "When you use the wallets in Blockcore, all your addresses will be sent to the Blockcore Server.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "h3");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, "Other software");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "This software is provided with no warranty.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, "None of other Blockcore software tracks or logs person identifiable information.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } }, encapsulation: 2 });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](PolicyComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-policy',
+                templateUrl: './policy.component.html'
             }]
     }], null, null); })();
 

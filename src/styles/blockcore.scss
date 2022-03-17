@@ -387,6 +387,10 @@ ul {
   .grid-container {
     display: block;
   }
+  
+  .footer {
+    font-size: 0.8em;
+  }
 
   .footer-left {
     padding-left: 2em;
@@ -396,6 +400,7 @@ ul {
   .footer-right {
     padding-left: 2em;
     grid-area: footer-right;
+    font-size: 0.8em;
   }
 
   .navbar-nav {
@@ -434,12 +439,12 @@ ul {
   }
 
   .footer-left {
-    padding-left: 2em;
+    padding-left: 1em;
     grid-area: footer-left;
   }
 
   .footer-right {
-    padding-left: 2em;
+    padding-left: 1em;
     grid-area: footer-right;
   }
 

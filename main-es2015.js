@@ -1967,7 +1967,7 @@ PolicyComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "When you use decentralized identifiers, you can choose to publish and make your identifiers and profiles attached to those identifiers, available to the public.");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, "Profiles are not stored on blockchain and can be withdrawn (unpublished) from public access at any time, give you do not loose access to your wallet.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, "Profiles are not stored on blockchain and can be withdrawn (unpublished) from public access at any time, given you do not loose access to your wallet.");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "p");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, "We advise to share as little information as possible in profiles attached to decentralized identifiers.");

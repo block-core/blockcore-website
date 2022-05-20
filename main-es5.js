@@ -3899,7 +3899,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "p");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, "Profiles are not stored on blockchain and can be withdrawn (unpublished) from public access at any time, give you do not loose access to your wallet.");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, "Profiles are not stored on blockchain and can be withdrawn (unpublished) from public access at any time, given you do not loose access to your wallet.");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 

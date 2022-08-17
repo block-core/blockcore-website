@@ -23,7 +23,20 @@ body {
 body {
    font-size: 22px;
    color: var(--foreground);
-   font-family: "Raleway", sans-serif;
+   font-family: -apple-system, 
+                BlinkMacSystemFont, 
+                "Segoe UI", 
+                Roboto, 
+                Oxygen-Sans, 
+                Ubuntu, 
+                Cantarell, 
+                "Helvetica Neue", 
+                sans-serif;
+}
+
+body {
+   font-family: 'Barlow', sans-serif;
+   font-family: 'Lato', sans-serif;
 }
 
 h1 {
@@ -36,7 +49,7 @@ h1 {
 h2 {
    font-weight: 300;
    font-size: 2em;
-   color: var(--accent);
+   // color: var(--accent);
 }
 
 h3 {
@@ -249,6 +262,7 @@ ul {
 
 .nav-link {
    text-decoration: none;
+   font-weight: 400;
    color: var(--background-alternative);
 }
 
@@ -338,6 +352,66 @@ ul {
    -o-transform: translateX(-100%);
    transform: translateX(-100%);
 }
+
+.logo-text {
+   width: 80%;
+}
+
+.centered {
+   text-align: center;
+}
+
+.splash-logo {
+   margin-top: 0em;
+   margin-bottom: 3em;
+}
+
+.thumbnail {
+   
+}
+
+.product-box {
+   clear: both;
+   padding: 2em;
+   display: grid; 
+   grid-template-columns: 1fr; 
+   grid-template-rows: 1fr auto; 
+   gap: 0px 0px; 
+   grid-template-areas: 
+     "logo"
+     "title"; 
+ }
+
+ .product-box-logo { grid-area: logo; }
+
+ .product-box-logo img {
+   width: 100%;
+ }
+
+ .product-box-title {
+   justify-self: end; 
+   grid-area: title; 
+   font-size: 3em;
+ }
+
+ .product-box-title h2 {
+   font-weight: 400;
+   margin: 0;
+   padding: 0;
+   font-size: 1em;
+ }
+
+ .product-purple {
+   color: purple;
+ }
+
+ .product-blue {
+   color: blue;
+ }
+
+ .product-gray {
+   color: gray;
+ }
 
 @media only screen and (max-width: 768px) {
    .navbar-logo {

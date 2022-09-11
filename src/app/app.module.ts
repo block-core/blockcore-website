@@ -15,6 +15,7 @@ import { NavFooterComponent } from './nav-footer/nav-menu.component';
 import { CreateChainComponent } from './create-chain/create-chain.component';
 import { DiscordComponent } from './discord/discord.component';
 import { PolicyComponent } from './policy/policy.component';
+import { WalletComponent } from './wallet/wallet.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { PolicyComponent } from './policy/policy.component';
     NavFooterComponent,
     HomeComponent,
     PlatformComponent,
+    WalletComponent,
     PolicyComponent,
     AboutComponent,
     SponsorsComponent,
@@ -36,6 +38,7 @@ import { PolicyComponent } from './policy/policy.component';
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'platform', component: PlatformComponent },
+      { path: 'wallet', component: WalletComponent },
       { path: 'chains', component: ChainsComponent },
       { path: 'create-chain', component: CreateChainComponent },
       { path: 'discord', component: DiscordComponent },

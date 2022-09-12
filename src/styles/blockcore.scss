@@ -373,6 +373,7 @@ ul {
 }
 
 .product-box {
+   margin-top: 4em;
    clear: both;
    display: grid;
    grid-template-columns: 1fr;
@@ -418,6 +419,10 @@ ul {
 
  .product-wallet {
    color: #22a893;
+ }
+
+ .product-vault {
+   color: #c2185b;
  }
 
  .product-indexer {

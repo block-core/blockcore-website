@@ -47,7 +47,9 @@ import { WalletComponent } from "./wallet/wallet.component";
             { path: "about", component: AboutComponent },
          ],
          {
+            scrollPositionRestoration: "enabled",
             anchorScrolling: "enabled",
+            scrollOffset: [0, 0], // [x, y]
          }
       ),
    ],

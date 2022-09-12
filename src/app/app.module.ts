@@ -10,7 +10,6 @@ import { HomeComponent } from "./home/home.component";
 import { PlatformComponent } from "./platform/platform.component";
 import { AboutComponent } from "./about/about.component";
 import { ChainsComponent } from "./chains/chains.component";
-import { SponsorsComponent } from "./sponsors/sponsors.component";
 import { NavFooterComponent } from "./nav-footer/nav-menu.component";
 import { CreateChainComponent } from "./create-chain/create-chain.component";
 import { DiscordComponent } from "./discord/discord.component";
@@ -27,7 +26,6 @@ import { WalletComponent } from "./wallet/wallet.component";
       WalletComponent,
       PolicyComponent,
       AboutComponent,
-      SponsorsComponent,
       ChainsComponent,
       CreateChainComponent,
    ],

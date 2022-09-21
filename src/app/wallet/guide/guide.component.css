@@ -1,0 +1,41 @@
+.guide {
+    display: flex;
+    gap: 1em;
+    margin-top: 2em;
+}
+
+.guide a {
+    text-decoration: none;
+}
+
+.guide h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.guide div:nth-child(1) {
+    flex-grow: 1;
+  }
+
+.guide div:nth-child(2) {
+    flex-grow: 1;
+}
+
+.guide img {
+    width: 100%;
+}
+
+.guide-left {
+
+}
+
+.guide-right {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 900px) {
+    .guide {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}

@@ -15,6 +15,7 @@ import { CreateChainComponent } from "./create-chain/create-chain.component";
 import { DiscordComponent } from "./discord/discord.component";
 import { PolicyComponent } from "./policy/policy.component";
 import { WalletComponent } from "./wallet/wallet.component";
+import { WalletGuideComponent } from "./wallet/guide/guide.component";
 
 @NgModule({
    declarations: [
@@ -28,6 +29,7 @@ import { WalletComponent } from "./wallet/wallet.component";
       AboutComponent,
       ChainsComponent,
       CreateChainComponent,
+      WalletGuideComponent,
    ],
    imports: [
       BrowserModule.withServerTransition({ appId: "ng-cli-universal" }),
@@ -38,6 +40,7 @@ import { WalletComponent } from "./wallet/wallet.component";
             { path: "", component: HomeComponent, pathMatch: "full" },
             { path: "platform", component: PlatformComponent },
             { path: "wallet", component: WalletComponent },
+            { path: "wallet/guide", component: WalletGuideComponent },
             { path: "chains", component: ChainsComponent },
             { path: "create-chain", component: CreateChainComponent },
             { path: "discord", component: DiscordComponent },

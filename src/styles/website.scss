@@ -530,7 +530,7 @@ html[data-theme="light"] {
 }
 
 .wrap {
-   padding: 1em 94px;
+   // padding: 1em 94px;
    box-sizing: border-box;
    margin: 0 auto;
 }
@@ -579,6 +579,8 @@ html[data-theme="light"] {
    margin-top: 32px;
    display: flex;
 }
+
+
 
 .button {
    box-sizing: border-box;
@@ -642,6 +644,17 @@ html[data-theme="light"] {
 
 .button.web:before {
    background-image: url('/assets/icons/chrome.svg');
+}
+
+@media (max-width: 900px) {
+   .app_block_buttons {
+       flex-direction: column;
+   }
+
+   .button {
+      margin: 0;
+      margin-top: 1em;
+   }
 }
 
 .features {
@@ -837,7 +850,7 @@ html[data-theme="light"] {
    }
 
    .button {
-      margin-left: 24px;
+      // margin-left: 24px;
       font-size: 16px;
       padding: 14.5px 24px 14.5px 20px;
    }
@@ -852,7 +865,7 @@ html[data-theme="light"] {
 
    .wrap {
       width: 100%;
-      padding: 2.1em 72px;
+      // padding: 2.1em 72px;
    }
 
    .app_block {
@@ -861,7 +874,8 @@ html[data-theme="light"] {
 
    .app_block_screen {
       box-sizing: border-box;
-      background-color: var(--bg-secondary);
+      /* background-color: var(--bg-secondary); */
+      background-color: #22a893;
       margin: 0;
       width: 100%;
       border-radius: 12px;
@@ -911,7 +925,7 @@ html[data-theme="light"] {
    }
 
    .app_block_info {
-      margin-top: 48px;
+      margin-top: 0;
    }
 
    .app_block_title {
@@ -1104,7 +1118,7 @@ html[data-theme="light"] {
    }
 
    .content {
-      padding: 0 0.7em 1em 0.7em;
+      padding: 0 1.5em 1em 1.5em;
    }
 
    .footer-left {
@@ -1128,7 +1142,7 @@ html[data-theme="light"] {
 
 @media (max-width: 700px) {
    .wrap {
-      padding: 2.1em 24px;
+      // padding: 2.1em 24px;
    }
 
 
@@ -1147,7 +1161,7 @@ html[data-theme="light"] {
    }
 
    .button {
-      margin-left: 16px;
+      // margin-left: 16px;
       flex: 1;
       padding: 11px 0;
       display: flex;
@@ -1300,7 +1314,6 @@ html[data-theme="light"] {
    }
 
    .content {
-      padding: 0 0.7em 1em 0.7em;
    }
 
    .grid-container {
@@ -1350,10 +1363,6 @@ html[data-theme="light"] {
 
    h1 {
       font-size: 2.0em;
-   }
-
-   .content {
-      padding: 0 0.7em 1em 0.7em;
    }
 
    .grid-container {

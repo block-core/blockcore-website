@@ -1,0 +1,26 @@
+.wallet-grid {
+    display: flex;
+    gap: 1em;
+}
+
+.wallet-info {
+
+}
+
+.wallet-screen {
+    
+}
+
+.screenshot {
+    max-width: 600px;
+    width: 100%;
+}
+
+.inner {
+    margin-left: 2em;
+}
+
+.link {
+    margin-top: 0.4em;
+    display: inline-block;
+}

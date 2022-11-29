@@ -1,186 +1,327 @@
+<div class="page-two">
+   <h1>Chains</h1>
 
-<div class="product-box">
-  <div class="product-box-logo">
-     <img src="assets/blockcore-logo-1024.png" class="mode-aware">
-  </div>
-  <div class="product-box-title product-gray">
-     <h2>Chains</h2>
-  </div>
+   <p>
+      As anyone is free to
+      <a routerLink="/create-chain">create their own blockchains</a> of the
+      Blockcore Platform, the Blockcore team is not responsible for their
+      deployments, infrastructure, support and have no roles associated with the
+      different implementations (blockchains).
+   </p>
+
+   <p>
+      If you are building and running a blockchain based on Blockcore, please
+      let us know and we can get you listed below.
+   </p>
+
+   <p>
+      Want to create your own blockchain? Use our
+      <a routerLink="/create-chain">instructions and generators here</a>.
+   </p>
+
+   <h2>Supported Blockchains</h2>
+
+   <ul>
+      <li>Bitcoin</li>
+      <li><a href="https://www.city-chain.org/">City Chain (CITY)</a></li>
+      <li><a href="https://cybits.org/">Cybits Chain (CY)</a></li>
+      <li><a href="https://economy.openexo.com/">ExO Economy (EXOS)</a></li>
+      <li><a href="https://impleum.com/">Impleum (IMPLX)</a></li>
+      <li>
+         <a href="https://royalsportscity.com/">Royal Sports City (RSC)</a>
+      </li>
+      <li><a href="https://www.rutanio.com/">Rutanio (RUTA)</a></li>
+      <li>
+         <a href="https://seniorblockchain.io/">Senior Blockchain (SBC)</a>
+      </li>
+      <li><a href="https://www.serfnet.info/">SERF (SERF)</a></li>
+      <li>
+         <a href="https://www.stratisplatform.com/">Stratis (STRAX and CRS)</a>
+      </li>
+      <li><a href="https://www.x42.tech/">x42 (X42)</a></li>
+      <li><a href="https://github.com/sonofsatoshi2020/xds">XDS (XDS)</a></li>
+      <li><a href="https://www.xrhodium.org/">xRhodium (XRC)</a></li>
+   </ul>
+
+   <h2>Reference Nodes</h2>
+
+   <p>
+      The Blockcore team provides reference implementations for various
+      blockchains. These are unsupported node software, use with caution. You
+      can look at these to get inspiration and examples on building your own
+      customized blockchain.
+   </p>
+
+   <p>
+      <a href="https://github.com/block-core/blockcore-nodes"
+         >https://github.com/block-core/blockcore-nodes</a
+      >
+   </p>
+
+   <h2>Hosted Services</h2>
+
+   <p>
+      While anyone are free to fork and modify our software, we also host our
+      own services running some of the blockchains that are implemented on
+      Blockcore. These are hosted with no SLA (Service Level Agreement), and
+      currently for free. If you'd like us to continue providing this service to
+      the community, consider becoming a
+      <a routerLink="/sponsors">sponsor</a> of Blockcore.
+   </p>
+
+   <h3>Blockcore Explorer</h3>
+
+   <a href="https://explorer.blockcore.net">https://explorer.blockcore.net</a>
+
+   <h3>CoinVault Explorer</h3>
+
+   <a href="https://explorer.coinvault.io">https://explorer.coinvault.io</a>
+
+   <h2>Chain Setup</h2>
+
+   <p>
+      We at Blockcore believe in making blockchain technology easier and more
+      approachable for every developer, so part of this guides us in how we
+      build our technologies. We attempt to make our technology easily
+      customizeable through setup and configuration, as oppose to code changes.
+   </p>
+
+   <p>
+      We host a list of setup and configurations for the platform tooling on
+      Blockcore.
+   </p>
+   <p>
+      Files available here are for more than Blockcore based blockchains, it is
+      configuration for other chains that our tools support. For example it is
+      possible to use the Blockcore Indexer and our Blockcore Explorer to index
+      and view Bitcoin blocks and transaction history.
+   </p>
+   <p>
+      The Blockcore team is not responsible for the accuracy and correctness of
+      setup files on this site. Individual chain owners is responsible for
+      keeping their setup up-to-date.
+   </p>
+   <p>
+      You can add your own awesome blockchain by forking our GitHub repo and
+      provide a pull request for review and approval. Projects that are
+      unresponsive and incompatible with our tooling, risk being removed.
+   </p>
+   <p>
+      We reserve the right to remove any of the configurations, without warning.
+   </p>
+
+   <p>
+      <a href="https://github.com/block-core/chaininfo"
+         >https://github.com/block-core/chaininfo</a
+      >
+   </p>
+
+   <h3>Bitcoin</h3>
+
+   <ul>
+      <li>
+         <a href="https://chains.blockcore.net/chains/BTC.json"
+            >chains/BTC.json</a
+         >
+      </li>
+      <li>
+         <a href="https://chains.blockcore.net/docker/BTC/docker-compose.yml"
+            >docker/BTC/docker-compose.yml</a
+         >
+      </li>
+   </ul>
+
+   <h3>City Chain</h3>
+
+   <ul>
+      <li>
+         <a href="https://chains.blockcore.net/chains/CITY.json"
+            >chains/CITY.json</a
+         >
+      </li>
+      <li>
+         <a href="https://chains.blockcore.net/docker/CITY/docker-compose.yml"
+            >docker/CITY/docker-compose.yml</a
+         >
+      </li>
+   </ul>
+
+   <h3>Cybits</h3>
+
+   <ul>
+      <li>
+         <a href="https://chains.blockcore.net/chains/CYBITS.json"
+            >chains/CYBITS.json</a
+         >
+      </li>
+      <li>
+         <a href="https://chains.blockcore.net/docker/CYBITS/docker-compose.yml"
+            >docker/CYBITS/docker-compose.yml</a
+         >
+      </li>
+   </ul>
+
+   <h3>Impleum</h3>
+
+   <ul>
+      <li>
+         <a href="https://chains.blockcore.net/chains/IMPLX.json"
+            >chains/IMPLX.json</a
+         >
+      </li>
+      <li>
+         <a href="https://chains.blockcore.net/docker/IMPLX/docker-compose.yml"
+            >docker/IMPLX/docker-compose.yml</a
+         >
+      </li>
+   </ul>
+
+   <h3>OpenExO</h3>
+
+   <ul>
+      <li>
+         <a href="https://chains.blockcore.net/chains/EXOS.json"
+            >chains/EXOS.json</a
+         >
+      </li>
+      <li>
+         <a href="https://chains.blockcore.net/docker/EXOS/docker-compose.yml"
+            >docker/EXOS/docker-compose.yml</a
+         >
+      </li>
+   </ul>
+
+   <h3>Royal Sports City</h3>
+
+   <ul>
+      <li>
+         <a href="https://chains.blockcore.net/chains/RSC.json"
+            >chains/RSC.json</a
+         >
+      </li>
+      <li>
+         <a href="https://chains.blockcore.net/docker/RSC/docker-compose.yml"
+            >docker/RSC/docker-compose.yml</a
+         >
+      </li>
+   </ul>
+
+   <h3>Rutanio</h3>
+
+   <ul>
+      <li>
+         <a href="https://chains.blockcore.net/chains/RUTA.json"
+            >chains/RUTA.json</a
+         >
+      </li>
+      <li>
+         <a href="https://chains.blockcore.net/docker/RUTA/docker-compose.yml"
+            >docker/RUTA/docker-compose.yml</a
+         >
+      </li>
+   </ul>
+
+   <h3>Senior Blockchain</h3>
+
+   <ul>
+      <li>
+         <a href="https://chains.blockcore.net/chains/SBC.json"
+            >chains/SBC.json</a
+         >
+      </li>
+      <li>
+         <a href="https://chains.blockcore.net/docker/SBC/docker-compose.yml"
+            >docker/SBC/docker-compose.yml</a
+         >
+      </li>
+   </ul>
+
+   <h3>SERF</h3>
+
+   <ul>
+      <li>
+         <a href="https://chains.blockcore.net/chains/SERF.json"
+            >chains/SERF.json</a
+         >
+      </li>
+      <li>
+         <a href="https://chains.blockcore.net/docker/SERF/docker-compose.yml"
+            >docker/SERF/docker-compose.yml</a
+         >
+      </li>
+   </ul>
+   <h3>Stratis</h3>
+
+   <ul>
+      <li>
+         <a href="https://chains.blockcore.net/chains/STRAX.json"
+            >chains/STRAX.json</a
+         >
+      </li>
+      <li>
+         <a href="https://chains.blockcore.net/docker/STRAX/docker-compose.yml"
+            >docker/STRAX/docker-compose.yml</a
+         >
+      </li>
+   </ul>
+
+   <h3>Cirrus</h3>
+
+   <ul>
+      <li>
+         <a href="https://chains.blockcore.net/chains/CRS.json"
+            >chains/CRS.json</a
+         >
+      </li>
+      <li>
+         <a href="https://chains.blockcore.net/docker/CRS/docker-compose.yml"
+            >docker/CRS/docker-compose.yml</a
+         >
+      </li>
+   </ul>
+
+   <h3>x42</h3>
+
+   <ul>
+      <li>
+         <a href="https://chains.blockcore.net/chains/X42.json"
+            >chains/X42.json</a
+         >
+      </li>
+      <li>
+         <a href="https://chains.blockcore.net/docker/X42/docker-compose.yml"
+            >docker/X42/docker-compose.yml</a
+         >
+      </li>
+   </ul>
+
+   <h3>XDS</h3>
+
+   <ul>
+      <li>
+         <a href="https://chains.blockcore.net/chains/XDS.json"
+            >chains/XDS.json</a
+         >
+      </li>
+      <li>
+         <a href="https://chains.blockcore.net/docker/XDS/docker-compose.yml"
+            >docker/XDS/docker-compose.yml</a
+         >
+      </li>
+   </ul>
+
+   <h3>XRC</h3>
+
+   <ul>
+      <li>
+         <a href="https://chains.blockcore.net/chains/XRC.json"
+            >chains/XRC.json</a
+         >
+      </li>
+      <li>
+         <a href="https://chains.blockcore.net/docker/XRC/docker-compose.yml"
+            >docker/XRC/docker-compose.yml</a
+         >
+      </li>
+   </ul>
 </div>
-
-<p>As anyone is free to <a routerLink="/create-chain">create their own blockchains</a> of the Blockcore Platform, the Blockcore team is not responsible for their deployments,
-  infrastructure, support and have no roles associated with the different implementations (blockchains).</p>
-
-<p>If you are building and running a blockchain based on Blockcore, please let us know and we can get you listed below.</p>
-
-<p>Want to create your own blockchain? Use our <a routerLink="/create-chain">instructions and generators here</a>.</p>
-
-<h2>Supported Blockchains</h2>
-
-<ul>
-  <li>Bitcoin</li>
-  <li><a href="https://www.city-chain.org/">City Chain (CITY)</a></li>
-  <li><a href="https://cybits.org/">Cybits Chain (CY)</a></li>
-  <li><a href="https://economy.openexo.com/">ExO Economy (EXOS)</a></li>
-  <li><a href="https://impleum.com/">Impleum (IMPLX)</a></li>
-  <li><a href="https://royalsportscity.com/">Royal Sports City (RSC)</a></li>
-  <li><a href="https://www.rutanio.com/">Rutanio (RUTA)</a></li>
-  <li><a href="https://seniorblockchain.io/">Senior Blockchain (SBC)</a></li>
-  <li><a href="https://www.serfnet.info/">SERF (SERF)</a></li>
-  <li><a href="https://www.stratisplatform.com/">Stratis (STRAX and CRS)</a></li>
-  <li><a href="https://www.x42.tech/">x42 (X42)</a></li>
-  <li><a href="https://github.com/sonofsatoshi2020/xds">XDS (XDS)</a></li>
-  <li><a href="https://www.xrhodium.org/">xRhodium (XRC)</a></li>
-</ul>
-
-<h2>Reference Nodes</h2>
-
-<p>The Blockcore team provides reference implementations for various blockchains. These are unsupported node software, use with caution. You can look at these to
-  get inspiration and examples on building your own customized blockchain.
-</p>
-
-<p>
-  <a href="https://github.com/block-core/blockcore-nodes">https://github.com/block-core/blockcore-nodes</a>
-</p>
-
-<h2>Hosted Services</h2>
-
-<p>While anyone are free to fork and modify our software, we also host our own services running some of the blockchains that are implemented on
-  Blockcore. These are hosted with no SLA (Service Level Agreement), and currently for free. If you'd like us to continue providing this service
-  to the community, consider becoming a <a routerLink="/sponsors">sponsor</a> of Blockcore.
-</p>
-
-<h3>Blockcore Explorer</h3>
-
-<a href="https://explorer.blockcore.net">https://explorer.blockcore.net</a>
-
-<h3>CoinVault Explorer</h3>
-
-<a href="https://explorer.coinvault.io">https://explorer.coinvault.io</a>
-
-<h2>Chain Setup</h2>
-
-<p>We at Blockcore believe in making blockchain technology easier and more approachable for every developer, so part of this guides us in how
-  we build our technologies. We attempt to make our technology easily customizeable through setup and configuration, as oppose to code changes.
-</p>
-
-<p>
-  We host a list of setup and configurations for the platform tooling on Blockcore.
-</p>
-<p>
-  Files available here are for more than Blockcore based blockchains, it is configuration for other
-  chains that our tools support. For example it is possible to use the Blockcore Indexer and our
-  Blockcore Explorer to index and view Bitcoin blocks and transaction history.
-</p>
-<p>
-  The Blockcore team is not responsible for the accuracy and correctness of setup files on this site.
-  Individual chain owners is responsible for keeping their setup up-to-date.
-</p>
-<p>
-  You can add your own awesome blockchain by forking our GitHub repo and provide a pull request for
-  review and approval. Projects that are unresponsive and incompatible with our tooling, risk being
-  removed.
-</p>
-<p>We reserve the right to remove any of the configurations, without warning.</p>
-
-<p>
-  <a href="https://github.com/block-core/chaininfo">https://github.com/block-core/chaininfo</a>
-</p>
-
-<h3>Bitcoin</h3>
-
-<ul>
-    <li><a href="https://chains.blockcore.net/chains/BTC.json">chains/BTC.json</a></li>
-    <li><a href="https://chains.blockcore.net/docker/BTC/docker-compose.yml">docker/BTC/docker-compose.yml</a></li>
-</ul>
-
-<h3>City Chain</h3>
-
-<ul>
-    <li><a href="https://chains.blockcore.net/chains/CITY.json">chains/CITY.json</a></li>
-    <li><a href="https://chains.blockcore.net/docker/CITY/docker-compose.yml">docker/CITY/docker-compose.yml</a></li>
-</ul>
-
-<h3>Cybits</h3>
-
-<ul>
-    <li><a href="https://chains.blockcore.net/chains/CYBITS.json">chains/CYBITS.json</a></li>
-    <li><a href="https://chains.blockcore.net/docker/CYBITS/docker-compose.yml">docker/CYBITS/docker-compose.yml</a></li>
-</ul>
-
-<h3>Impleum</h3>
-
-<ul>
-    <li><a href="https://chains.blockcore.net/chains/IMPLX.json">chains/IMPLX.json</a></li>
-    <li><a href="https://chains.blockcore.net/docker/IMPLX/docker-compose.yml">docker/IMPLX/docker-compose.yml</a></li>
-</ul>
-
-<h3>OpenExO</h3>
-
-<ul>
-    <li><a href="https://chains.blockcore.net/chains/EXOS.json">chains/EXOS.json</a></li>
-    <li><a href="https://chains.blockcore.net/docker/EXOS/docker-compose.yml">docker/EXOS/docker-compose.yml</a></li>
-</ul>
-
-<h3>Royal Sports City</h3>
-
-<ul>
-    <li><a href="https://chains.blockcore.net/chains/RSC.json">chains/RSC.json</a></li>
-    <li><a href="https://chains.blockcore.net/docker/RSC/docker-compose.yml">docker/RSC/docker-compose.yml</a></li>
-</ul>
-
-<h3>Rutanio</h3>
-
-<ul>
-    <li><a href="https://chains.blockcore.net/chains/RUTA.json">chains/RUTA.json</a></li>
-    <li><a href="https://chains.blockcore.net/docker/RUTA/docker-compose.yml">docker/RUTA/docker-compose.yml</a></li>
-</ul>
-
-<h3>Senior Blockchain</h3>
-
-<ul>
-    <li><a href="https://chains.blockcore.net/chains/SBC.json">chains/SBC.json</a></li>
-    <li><a href="https://chains.blockcore.net/docker/SBC/docker-compose.yml">docker/SBC/docker-compose.yml</a></li>
-</ul>
-
-<h3>SERF</h3>
-
-<ul>
-    <li><a href="https://chains.blockcore.net/chains/SERF.json">chains/SERF.json</a></li>
-    <li><a href="https://chains.blockcore.net/docker/SERF/docker-compose.yml">docker/SERF/docker-compose.yml</a></li>
-</ul>
-<h3>Stratis</h3>
-
-<ul>
-    <li><a href="https://chains.blockcore.net/chains/STRAX.json">chains/STRAX.json</a></li>
-    <li><a href="https://chains.blockcore.net/docker/STRAX/docker-compose.yml">docker/STRAX/docker-compose.yml</a></li>
-</ul>
-
-<h3>Cirrus</h3>
-
-<ul>
-    <li><a href="https://chains.blockcore.net/chains/CRS.json">chains/CRS.json</a></li>
-    <li><a href="https://chains.blockcore.net/docker/CRS/docker-compose.yml">docker/CRS/docker-compose.yml</a></li>
-</ul>
-
-<h3>x42</h3>
-
-<ul>
-    <li><a href="https://chains.blockcore.net/chains/X42.json">chains/X42.json</a></li>
-    <li><a href="https://chains.blockcore.net/docker/X42/docker-compose.yml">docker/X42/docker-compose.yml</a></li>
-</ul>
-
-<h3>XDS</h3>
-
-<ul>
-    <li><a href="https://chains.blockcore.net/chains/XDS.json">chains/XDS.json</a></li>
-    <li><a href="https://chains.blockcore.net/docker/XDS/docker-compose.yml">docker/XDS/docker-compose.yml</a></li>
-</ul>
-
-<h3>XRC</h3>
-
-<ul>
-    <li><a href="https://chains.blockcore.net/chains/XRC.json">chains/XRC.json</a></li>
-    <li><a href="https://chains.blockcore.net/docker/XRC/docker-compose.yml">docker/XRC/docker-compose.yml</a></li>
-</ul>
-

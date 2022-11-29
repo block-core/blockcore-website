@@ -1,188 +1,284 @@
-<div class="config-form">
+<div class="page-two">
+   <div class="config-form">
+      <h1>Blockcore /// Create</h1>
 
-  <h1>Blockcore /// Create</h1>
+      <h3>PREVIEW - NOT FULLY FUNCTIONAL</h3>
 
-  <h3>PREVIEW - NOT FULLY FUNCTIONAL</h3>
+      <p>
+         Our tools makes it super easy to create your own blockchain, but there
+         is quite a few configuration parameters that needs to be set for the
+         tools.
+      </p>
 
-  <p>
-    Our tools makes it super easy to create your own blockchain, but there is quite a few configuration parameters that
-    needs to be set for the tools.</p>
+      <p>
+         This page will generate the commands for you, making it even quicker
+         and easier to get started.
+      </p>
 
-  <p>This page will generate the commands for you, making it even quicker and easier to get started.</p>
+      <h2>Configuration</h2>
 
-  <h2>Configuration</h2>
+      <p>
+         <label for="name">Name (no whitespace)</label>
+         <input id="name" type="text" [(ngModel)]="config.name" />
+      </p>
 
-  <p>
-    <label for="name">Name (no whitespace)</label>
-    <input id="name" type="text" [(ngModel)]="config.name">
-  </p>
+      <p>
+         <label for="ticker"
+            >Ticker/Symbol
+            <a
+               href="https://github.com/satoshilabs/slips/blob/master/slip-0044.md"
+               target="_blank"
+               ><i class="fas fa-question-circle"></i></a
+         ></label>
+         <input id="ticker" type="text" [(ngModel)]="config.ticker" />
+      </p>
 
-  <p>
-    <label for="ticker">Ticker/Symbol <a href="https://github.com/satoshilabs/slips/blob/master/slip-0044.md"
-        target="_blank"><i class="fas fa-question-circle"></i></a></label>
-    <input id="ticker" type="text" [(ngModel)]="config.ticker">
-  </p>
+      <p>
+         <label for="coinType"
+            >Coin Type (HD index)
+            <a
+               href="https://github.com/satoshilabs/slips/blob/master/slip-0044.md"
+               target="_blank"
+               ><i class="fas fa-question-circle"></i></a
+         ></label>
+         <input id="coinType" type="text" [(ngModel)]="config.coinType" />
+      </p>
 
-  <p>
-    <label for="coinType">Coin Type (HD index) <a href="https://github.com/satoshilabs/slips/blob/master/slip-0044.md"
-        target="_blank"><i class="fas fa-question-circle"></i></a></label>
-    <input id="coinType" type="text" [(ngModel)]="config.coinType">
-  </p>
+      <p>
+         <label for="genesis"
+            >Genesis Text
+            <a href="https://en.bitcoin.it/wiki/Genesis_block" target="_blank"
+               ><i class="fas fa-question-circle"></i></a
+         ></label>
+         <input id="genesis" type="text" [(ngModel)]="config.genesis" />
+      </p>
 
-  <p>
-    <label for="genesis">Genesis Text <a href="https://en.bitcoin.it/wiki/Genesis_block" target="_blank"><i
-          class="fas fa-question-circle"></i></a></label>
-    <input id="genesis" type="text" [(ngModel)]="config.genesis">
-  </p>
+      <p>
+         <label for="magic"
+            >Magic Header (Hex), must be unique pr. blockchain<a
+               href="https://ascii.cl/"
+               target="_blank"
+               ><i class="fas fa-question-circle"></i></a
+         ></label>
+         <input id="magic" type="text" [(ngModel)]="config.magic" />
+      </p>
 
-  <p>
-    <label for="magic">Magic Header (Hex), must be unique pr. blockchain<a href="https://ascii.cl/" target="_blank"><i
-          class="fas fa-question-circle"></i></a></label>
-    <input id="magic" type="text" [(ngModel)]="config.magic">
-  </p>
+      <p>
+         <label for="pubkeyaddress"
+            >Coin Address Prefix
+            <a
+               href="https://en.bitcoin.it/wiki/List_of_address_prefixes"
+               target="_blank"
+               ><i class="fas fa-question-circle"></i></a
+         ></label>
+         <input
+            id="pubkeyaddress"
+            type="text"
+            [(ngModel)]="config.pubkeyaddress"
+         />
+      </p>
 
-  <p>
-    <label for="pubkeyaddress">Coin Address Prefix <a href="https://en.bitcoin.it/wiki/List_of_address_prefixes"
-        target="_blank"><i class="fas fa-question-circle"></i></a></label>
-    <input id="pubkeyaddress" type="text" [(ngModel)]="config.pubkeyaddress">
-  </p>
+      <p>
+         <label for="scriptaddress"
+            >Script Address Prefix
+            <a
+               href="https://en.bitcoin.it/wiki/List_of_address_prefixes"
+               target="_blank"
+               ><i class="fas fa-question-circle"></i></a
+         ></label>
+         <input
+            id="scriptaddress"
+            type="text"
+            [(ngModel)]="config.scriptaddress"
+         />
+      </p>
 
-  <p>
-    <label for="scriptaddress">Script Address Prefix <a href="https://en.bitcoin.it/wiki/List_of_address_prefixes"
-        target="_blank"><i class="fas fa-question-circle"></i></a></label>
-    <input id="scriptaddress" type="text" [(ngModel)]="config.scriptaddress">
-  </p>
+      <p>
+         <label for="secretaddress"
+            >Secret Address Prefix
+            <a
+               href="https://en.bitcoin.it/wiki/List_of_address_prefixes"
+               target="_blank"
+               ><i class="fas fa-question-circle"></i></a
+         ></label>
+         <input
+            id="secretaddress"
+            type="text"
+            [(ngModel)]="config.secretaddress"
+         />
+      </p>
 
-  <p>
-    <label for="secretaddress">Secret Address Prefix <a href="https://en.bitcoin.it/wiki/List_of_address_prefixes"
-        target="_blank"><i class="fas fa-question-circle"></i></a></label>
-    <input id="secretaddress" type="text" [(ngModel)]="config.secretaddress">
-  </p>
+      <p>
+         <label for="preminereward">Premine Reward</label>
+         <input
+            id="preminereward"
+            type="text"
+            [(ngModel)]="config.preminereward"
+         />
+      </p>
 
-  <p>
-    <label for="preminereward">Premine Reward</label>
-    <input id="preminereward" type="text" [(ngModel)]="config.preminereward">
-  </p>
+      <p>
+         <label for="lastpowblock">Last Proof-of-Work block</label>
+         <input
+            id="lastpowblock"
+            type="text"
+            [(ngModel)]="config.lastpowblock"
+         />
+      </p>
 
-  <p>
-    <label for="lastpowblock">Last Proof-of-Work block</label>
-    <input id="lastpowblock" type="text" [(ngModel)]="config.lastpowblock">
-  </p>
+      <p>
+         <label for="powreward">Proof-of-Work Reward</label>
+         <input id="powreward" type="text" [(ngModel)]="config.powreward" />
+      </p>
+      <p>
+         <label for="posreward">Proof-of-Stake Reward</label>
+         <input id="posreward" type="text" [(ngModel)]="config.posreward" />
+      </p>
 
-  <p>
-    <label for="powreward">Proof-of-Work Reward</label>
-    <input id="powreward" type="text" [(ngModel)]="config.powreward">
-  </p>
-  <p>
-    <label for="posreward">Proof-of-Stake Reward</label>
-    <input id="posreward" type="text" [(ngModel)]="config.posreward">
-  </p>
+      <p>
+         <label for="port">Port (Peer-to-peer TCP port)</label>
+         <input id="port" type="text" [(ngModel)]="config.port" />
+      </p>
+      <p>
+         <label for="rpcport">RPC Port</label>
+         <input id="rpcport" type="text" [(ngModel)]="config.rpcport" />
+      </p>
+      <p>
+         <label for="apiport">API Port</label>
+         <input id="apiport" type="text" [(ngModel)]="config.apiport" />
+      </p>
+      <p>
+         <label for="portregtest">Port: RegTest</label>
+         <input id="portregtest" type="text" [(ngModel)]="config.portregtest" />
+      </p>
+      <p>
+         <label for="rpcportregtest">RPC Port: RegTest</label>
+         <input
+            id="rpcportregtest"
+            type="text"
+            [(ngModel)]="config.rpcportregtest"
+         />
+      </p>
+      <p>
+         <label for="apiportregtest">API Port: RegTest</label>
+         <input
+            id="apiportregtest"
+            type="text"
+            [(ngModel)]="config.apiportregtest"
+         />
+      </p>
+      <p>
+         <label for="porttest">Port: Test</label>
+         <input id="porttest" type="text" [(ngModel)]="config.porttest" />
+      </p>
+      <p>
+         <label for="rpcporttest">RPC Port: Test</label>
+         <input id="rpcporttest" type="text" [(ngModel)]="config.rpcporttest" />
+      </p>
+      <p>
+         <label for="apiporttest">API Port: Test</label>
+         <input id="apiporttest" type="text" [(ngModel)]="config.apiporttest" />
+      </p>
 
-  <p>
-    <label for="port">Port (Peer-to-peer TCP port)</label>
-    <input id="port" type="text" [(ngModel)]="config.port">
-  </p>
-  <p>
-    <label for="rpcport">RPC Port</label>
-    <input id="rpcport" type="text" [(ngModel)]="config.rpcport">
-  </p>
-  <p>
-    <label for="apiport">API Port</label>
-    <input id="apiport" type="text" [(ngModel)]="config.apiport">
-  </p>
-  <p>
-    <label for="portregtest">Port: RegTest</label>
-    <input id="portregtest" type="text" [(ngModel)]="config.portregtest">
-  </p>
-  <p>
-    <label for="rpcportregtest">RPC Port: RegTest</label>
-    <input id="rpcportregtest" type="text" [(ngModel)]="config.rpcportregtest">
-  </p>
-  <p>
-    <label for="apiportregtest">API Port: RegTest</label>
-    <input id="apiportregtest" type="text" [(ngModel)]="config.apiportregtest">
-  </p>
-  <p>
-    <label for="porttest">Port: Test</label>
-    <input id="porttest" type="text" [(ngModel)]="config.porttest">
-  </p>
-  <p>
-    <label for="rpcporttest">RPC Port: Test</label>
-    <input id="rpcporttest" type="text" [(ngModel)]="config.rpcporttest">
-  </p>
-  <p>
-    <label for="apiporttest">API Port: Test</label>
-    <input id="apiporttest" type="text" [(ngModel)]="config.apiporttest">
-  </p>
+      <p>
+         <label for="seeddns1">DNS Seed 1</label>
+         <input id="seeddns1" type="text" [(ngModel)]="config.seeddns1" />
+      </p>
+      <p>
+         <label for="seeddns2">DNS Seed 2</label>
+         <input id="seeddns2" type="text" [(ngModel)]="config.seeddns2" />
+      </p>
+      <p>
+         <label for="seednode1">Node 1 IP address</label>
+         <input id="seednode1" type="text" [(ngModel)]="config.seednode1" />
+      </p>
+      <p>
+         <label for="seednode2">Node 2 IP address</label>
+         <input id="seednode2" type="text" [(ngModel)]="config.seednode2" />
+      </p>
 
-  <p>
-    <label for="seeddns1">DNS Seed 1</label>
-    <input id="seeddns1" type="text" [(ngModel)]="config.seeddns1">
-  </p>
-  <p>
-    <label for="seeddns2">DNS Seed 2</label>
-    <input id="seeddns2" type="text" [(ngModel)]="config.seeddns2">
-  </p>
-  <p>
-    <label for="seednode1">Node 1 IP address</label>
-    <input id="seednode1" type="text" [(ngModel)]="config.seednode1">
-  </p>
-  <p>
-    <label for="seednode2">Node 2 IP address</label>
-    <input id="seednode2" type="text" [(ngModel)]="config.seednode2">
-  </p>
+      <button *ngIf="!advanced" (click)="advanced = true">
+         Show advanced options
+      </button>
+      <button *ngIf="advanced" (click)="advanced = false">
+         Hide advanced options
+      </button>
 
-  <button *ngIf="!advanced" (click)="advanced = true">Show advanced options</button>
-  <button *ngIf="advanced" (click)="advanced = false">Hide advanced options</button>
+      <p *ngIf="advanced">
+         <label for="postimestampmask">pos-timestamp-mask</label>
+         <input
+            id="postimestampmask"
+            type="text"
+            [(ngModel)]="config.postimestampmask"
+         />
+      </p>
+      <p *ngIf="advanced">
+         <label for="posversion">pos-version</label>
+         <input id="posversion" type="text" [(ngModel)]="config.posversion" />
+      </p>
 
-  <p *ngIf="advanced">
-    <label for="postimestampmask">pos-timestamp-mask</label>
-    <input id="postimestampmask" type="text" [(ngModel)]="config.postimestampmask">
-  </p>
-  <p *ngIf="advanced">
-    <label for="posversion">pos-version</label>
-    <input id="posversion" type="text" [(ngModel)]="config.posversion">
-  </p>
+      <p *ngIf="advanced">
+         <label for="targetspacing">target-spacing</label>
+         <input
+            id="targetspacing"
+            type="text"
+            [(ngModel)]="config.targetspacing"
+         />
+      </p>
 
-  <p *ngIf="advanced">
-    <label for="targetspacing">target-spacing</label>
-    <input id="targetspacing" type="text" [(ngModel)]="config.targetspacing">
-  </p>
+      <h2>Commands</h2>
 
-  <h2>Commands</h2>
+      <p>
+         Here are the generated output commands you can copy and paste to your
+         local computer.
+      </p>
 
-  <p>Here are the generated output commands you can copy and paste to your local computer.</p>
+      <p>Choose your operating system:</p>
 
-  <p>
-    Choose your operating system:
-  </p>
+      <p>
+         <select name="os" [(ngModel)]="os">
+            <option value="win">Windows</option>
+            <option value="linux">Linux</option>
+            <option value="mac">Mac</option>
+         </select>
+      </p>
 
-  <p>
-    <select name="os" [(ngModel)]="os">
-      <option value="win">Windows</option>
-      <option value="linux">Linux</option>
-      <option value="mac">Mac</option>
-    </select>
-  </p>
+      <h3>Prerequisites</h3>
 
-  <h3>Prerequisites</h3>
+      <p>
+         <a href="https://dotnet.microsoft.com/download" target="_blank"
+            >.NET Core SDK</a
+         >
+      </p>
+      <p>
+         <a
+            href="https://github.com/block-core/blockcore-tools/releases"
+            target="_blank"
+            >Blockcore Genesis Generator</a
+         >
+      </p>
 
-  <p><a href="https://dotnet.microsoft.com/download" target="_blank">.NET Core SDK</a></p>
-  <p>
-    <a href="https://github.com/block-core/blockcore-tools/releases" target="_blank">Blockcore Genesis Generator</a>
-  </p>
+      <h3>Generate Your Genesis Block</h3>
 
-  <h3>Generate Your Genesis Block</h3>
+      <p>Command:</p>
 
-  <p>Command:</p>
+      <pre><code>{{generator}}</code></pre>
 
-  <pre><code>{{generator}}</code></pre>
+      <p>
+         This will generate an "genesis.json" file. You must open this file and
+         copy the entire file into input below:
+      </p>
 
-  <p>This will generate an "genesis.json" file. You must open this file and copy the entire file into input below:</p>
-
-  <p>
-    <label for="genesisjson">Genesis JSON</label>
-    <textarea id="genesisjson" name="genesisjson" [(ngModel)]="genesisjson" (blur)="parseJson()" rows="8" cols="100">
+      <p>
+         <label for="genesisjson">Genesis JSON</label>
+         <textarea
+            id="genesisjson"
+            name="genesisjson"
+            [(ngModel)]="genesisjson"
+            (blur)="parseJson()"
+            rows="8"
+            cols="100"
+         >
       {
         "description": "Genesis Blocks Generated by Blockcore Genesis Block Generator v1.0.",
         "url": "https://www.blockcore.net",
@@ -218,58 +314,96 @@
           }
         ]
       }
-    </textarea>
-    <br>
-    <span class="warning" *ngIf="genesisWarning">{{genesisWarning}}</span>
-  </p>
+    </textarea
+         >
+         <br />
+         <span class="warning" *ngIf="genesisWarning">{{
+            genesisWarning
+         }}</span>
+      </p>
 
-  <h3>Generate Your Blockchain Node Software</h3>
+      <h3>Generate Your Blockchain Node Software</h3>
 
-  <p>First you must install the template project:</p>
+      <p>First you must install the template project:</p>
 
-  <pre><code>dotnet new --install Blockcore.Coin.Template</code></pre>
+      <pre><code>dotnet new --install Blockcore.Coin.Template</code></pre>
 
-  <p>Download this generated file and run it in a new and empty folder you create on your computer.</p>
+      <p>
+         Download this generated file and run it in a new and empty folder you
+         create on your computer.
+      </p>
 
-  <p>
-    <button (click)="download()">Download Script ({{filename}})</button>
-  </p>
+      <p>
+         <button (click)="download()">Download Script ({{ filename }})</button>
+      </p>
 
-  <p><em>Note on warnings: You will see warnings on your computer when download this script. You must accept that the
-      file is kept / saved anyway.</em></p>
+      <p>
+         <em
+            >Note on warnings: You will see warnings on your computer when
+            download this script. You must accept that the file is kept / saved
+            anyway.</em
+         >
+      </p>
 
-  <p>If you don't want to download or are unable to, you can see the contents here and manually copy and run it on your
-    computer:</p>
+      <p>
+         If you don't want to download or are unable to, you can see the
+         contents here and manually copy and run it on your computer:
+      </p>
 
-  <pre><code>{{node}}</code></pre>
+      <pre><code>{{node}}</code></pre>
 
-  <p>If successful you should see the output: <em>"The template "Blockcore Coin" was created successfully."</em></p>
+      <p>
+         If successful you should see the output:
+         <em>"The template "Blockcore Coin" was created successfully."</em>
+      </p>
 
-  <h2>Congratulations!</h2>
+      <h2>Congratulations!</h2>
 
-  <p>You now have a folder on your computer with the source code that can be compiled into a running node software. The
-    node software even includes basic wallet functionality.</p>
+      <p>
+         You now have a folder on your computer with the source code that can be
+         compiled into a running node software. The node software even includes
+         basic wallet functionality.
+      </p>
 
-  <p>Blockchain technology is advanced and there are still more steps to be completed before you have a fully functional
-    blockchain up and running. You need multiple nodes, you need mining / staking nodes. You might want to have DNS
-    nodes. We'll provide instructions for this in the future, until then, join our Discord with the invite link at the
-    bottom of this page.</p>
+      <p>
+         Blockchain technology is advanced and there are still more steps to be
+         completed before you have a fully functional blockchain up and running.
+         You need multiple nodes, you need mining / staking nodes. You might
+         want to have DNS nodes. We'll provide instructions for this in the
+         future, until then, join our Discord with the invite link at the bottom
+         of this page.
+      </p>
 
-  <h2>Extend your ecosystem</h2>
+      <h2>Extend your ecosystem</h2>
 
-  <h3>Add your blockchain to supported chains</h3>
+      <h3>Add your blockchain to supported chains</h3>
 
-  <p>If you want to, you can now submit your blockchain to the supported chains list. If you do this, the Explorer and
-    Indexer can more easily be adopted to your chain.</p>
+      <p>
+         If you want to, you can now submit your blockchain to the supported
+         chains list. If you do this, the Explorer and Indexer can more easily
+         be adopted to your chain.
+      </p>
 
-  <p><a href="https://github.com/block-core/chaininfo">https://github.com/block-core/chaininfo</a></p>
+      <p>
+         <a href="https://github.com/block-core/chaininfo"
+            >https://github.com/block-core/chaininfo</a
+         >
+      </p>
 
-  <h3>Add an Indexer for your chain</h3>
+      <h3>Add an Indexer for your chain</h3>
 
-  <p><a href="https://github.com/block-core/blockcore-indexer">https://github.com/block-core/blockcore-indexer</a></p>
+      <p>
+         <a href="https://github.com/block-core/blockcore-indexer"
+            >https://github.com/block-core/blockcore-indexer</a
+         >
+      </p>
 
-  <h3>Add an Explorer for your chain</h3>
+      <h3>Add an Explorer for your chain</h3>
 
-  <p><a href="https://github.com/block-core/blockcore-explorer">https://github.com/block-core/blockcore-explorer</a></p>
-
+      <p>
+         <a href="https://github.com/block-core/blockcore-explorer"
+            >https://github.com/block-core/blockcore-explorer</a
+         >
+      </p>
+   </div>
 </div>

@@ -3,9 +3,7 @@ import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { RouterModule } from "@angular/router";
-
 import { AppComponent } from "./app.component";
-import { NavMenuComponent } from "./nav-menu/nav-menu.component";
 import { HomeComponent } from "./home/home.component";
 import { PlatformComponent } from "./platform/platform.component";
 import { AboutComponent } from "./about/about.component";
@@ -20,7 +18,6 @@ import { WalletGuideComponent } from "./wallet/guide/guide.component";
 @NgModule({
    declarations: [
       AppComponent,
-      NavMenuComponent,
       NavFooterComponent,
       HomeComponent,
       PlatformComponent,
@@ -32,7 +29,7 @@ import { WalletGuideComponent } from "./wallet/guide/guide.component";
       WalletGuideComponent,
    ],
    imports: [
-      BrowserModule.withServerTransition({ appId: "ng-cli-universal" }),
+      BrowserModule,
       HttpClientModule,
       FormsModule,
       RouterModule.forRoot(

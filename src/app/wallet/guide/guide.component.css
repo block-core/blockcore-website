@@ -4,9 +4,6 @@
     margin-top: 2em;
 }
 
-.guide a {
-    text-decoration: none;
-}
 
 .guide h3 {
     margin: 0;
@@ -31,6 +28,10 @@
 
 .guide-right {
     flex-direction: row-reverse;
+}
+
+a.nolink {
+    text-decoration: none;
 }
 
 @media (max-width: 900px) {

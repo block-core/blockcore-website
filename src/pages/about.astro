@@ -1,0 +1,197 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'About us',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="About Blockcore"
+    image={{
+      src: '~/assets/images/blockcore.png',
+      alt: 'Blockcore',
+    }}
+  >
+    <Fragment slot="title">
+      Building the Future of Decentralization
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Blockcore is a collective of developers and engineers dedicated to creating the foundational tools for a decentralized future. We believe in empowering individuals by eliminating the need for centralized systems.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Our Impact"
+    stats={[
+      { title: 'Projects', amount: '15+' },
+      { title: 'Contributors', amount: '100+' },
+      { title: 'Repositories', amount: '50+' },
+      { title: 'Years of Experience', amount: '10+' },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="What We Offer"
+    subtitle="Blockcore provides a comprehensive suite of open-source tools for building decentralized applications and blockchain networks."
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'Custom Blockchains',
+        description:
+          'Leverage our platform to create secure and scalable custom blockchains tailored to your needs.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Web5 Integration',
+        description:
+          'Integrate Web5 technologies to enhance privacy, security, and user control in your applications.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Decentralized Applications',
+        description:
+          'Build and deploy decentralized applications with ease using Blockcore’s robust toolkit.',
+        icon: 'tabler:template',
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    columns={3}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Community-Driven',
+        description:
+          'Our platform is powered by a strong community of developers who contribute to its continuous improvement.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Open-Source Tools',
+        description:
+          'All our tools are open-source, ensuring transparency, collaboration, and innovation.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Cross-Platform Support',
+        description:
+          'Deploy your projects across various platforms, ensuring compatibility and broad accessibility.',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: 'Advanced Security',
+        description:
+          'Our solutions are designed with advanced security features to protect your data and assets.',
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'Modular Architecture',
+        description:
+          'Enjoy the flexibility of a modular architecture that allows for easy customization and scaling.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Developer Resources',
+        description:
+          'Access comprehensive documentation and developer resources to get started quickly.',
+        icon: 'tabler:book',
+      },
+    ]}
+ 
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Our Core Values"
+    subtitle="At Blockcore, our mission is guided by a commitment to decentralization, innovation, and collaboration."
+    items={[
+      {
+        title: 'Empowerment',
+        description:
+          'We empower developers and users by providing the tools they need to build and control their own systems.',
+      },
+      {
+        title: 'Transparency',
+        description:
+          'Our open-source approach ensures that everything we create is transparent and open for contribution.',
+      },
+      {
+        title: 'Innovation',
+        description:
+          'We are at the forefront of blockchain and Web5 technologies, constantly innovating to meet the needs of the future.',
+      },
+    ]}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Our Achievements"
+    subtitle="Blockcore has made significant strides in the blockchain space, contributing to the development of decentralized technologies."
+    isReversed={true}
+    callToAction={{
+      text: 'See our work',
+      href: 'https://github.com/block-core',
+    }}
+    items={[
+      {
+        title: 'Global Reach',
+        description: 'Blockcore’s tools and technologies are used by developers and communities around the world.',
+        icon: 'tabler:globe',
+      },
+      {
+        title: 'Community Support',
+        description:
+          'Our platform is supported by a growing community of passionate developers and contributors.',
+        icon: 'tabler:heart',
+      },
+      {
+        title: 'Continuous Innovation',
+        description:
+          'We have consistently introduced new features and improvements, keeping Blockcore at the cutting edge of technology.',
+        icon: 'tabler:users',
+      },
+    ]}
+  />
+
+ 
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Contact Us"
+    tagline="Get in Touch"
+    columns={2}
+    items={[
+      {
+        title: 'Join our Community',
+        description:
+          'Connect with us on GitHub and Discord to collaborate and contribute.',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Support',
+        description:
+          'For technical support, reach out to us via our support channels.',
+        icon: 'tabler:headset',
+      },
+    ]}
+  />
+</Layout>

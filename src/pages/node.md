@@ -3,9 +3,11 @@ title: 'Node Software'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-## Blockcore Node Software
+## Blockchain Node
 
-Blockcore Node Software is a powerful, open-source platform designed for building, deploying, and maintaining decentralized blockchain networks. Built on top of the Stratis technology stack, Blockcore nodes offer a versatile and robust foundation for running various types of blockchain networks, including both Proof-of-Work (PoW) and Proof-of-Stake (PoS) consensus mechanisms.
+The Blockchain Node by Blockcore is a full node implementation that supports Bitcoin, and other cryptocurrencies.
+
+Our Node software is a powerful, open-source platform designed for building, deploying, and maintaining decentralized blockchain networks. Built on top of the Stratis technology stack, Blockcore nodes offer a versatile and robust foundation for running various types of blockchain networks, including both Proof-of-Work (PoW) and Proof-of-Stake (PoS) consensus mechanisms.
 
 ![Blockcore Node](../assets/images/hero-image.png)
 

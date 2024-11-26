@@ -31,7 +31,7 @@ export const headerData = {
         },
         {
           text: 'Blockchain',
-          href: getPermalink('/node-software'),
+          href: getPermalink('/node'),
         },
         {
           text: 'Indexer',

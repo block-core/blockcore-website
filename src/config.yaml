@@ -1,6 +1,6 @@
 site:
   name: Blockcore
-  site: 'https://blockcore.net'
+  site: 'https://www.blockcore.net'
   base: '/'
   trailingSlash: false
 
@@ -18,9 +18,9 @@ metadata:
   openGraph:
     site_name: Blockcore
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/blockcore-social.jpg'
         width: 1200
-        height: 628
+        height: 640
     type: website
   twitter:
     handle: '@blockcoredev'

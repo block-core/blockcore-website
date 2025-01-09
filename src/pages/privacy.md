@@ -14,7 +14,7 @@ layout: '~/layouts/MarkdownLayout.astro'
 <p>When you use the Wallet, all your addresses will be sent to the Blockcore Servers, your own private server or any community server of your choosing.</p>
 
 <p>When Blockcore/Free City/CoinVault Wallet is installed through the Chrome Web Store, there is information 
-store about installations and uninstalls, impressions (page views) within the extension.</p>
+stored with Google, about installations and uninstalls, impressions (page views) within the extension. This information is only accessible to Blockcore management.</p>
 
 <h3>Purchasing Cryptocurrency</h3>
 

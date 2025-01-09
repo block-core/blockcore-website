@@ -50,7 +50,7 @@ stored with Google, about installations and uninstalls, impressions (page views)
 
 <p>We reserve the right to update and change our privacy policy at any time, and it is users responsibility to ensure knowledge and acceptance of the latest revisions.</p>
 
-_Last updated_: 2024-01-09
+_Last updated_: 2025-01-09
 
 <!--
 ## Privacy Policy

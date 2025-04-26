@@ -1,0 +1,22 @@
+---
+const discordUrl = 'https://discord.gg/qhvwGMyvjR';
+
+Astro.response.headers.set('Location', discordUrl);
+Astro.response.status = 302;
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content={`0;url=${discordUrl}`}>
+    <title>Redirecting to Discord...</title>
+  </head>
+  <body>
+    <p>Redirecting to Discord... If you are not redirected automatically, <a href={discordUrl}>click here</a>.</p>
+    
+    <script>
+      window.location.href = '${discordUrl}';
+    </script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+/* ==========================================================================
+   BLOCKCORE — DESIGN TOKENS
+   Swiss International Typographic Style.
+   This file is the single source of truth for the design system DNA.
+   No other stylesheet may declare a raw colour, radius or duration value.
+   ========================================================================== */
+
+:root {
+  /* --- Colour -------------------------------------------------------------
+     A strict, four-value palette. Red is a signal, never decoration. */
+  --c-bg: #ffffff;
+  --c-fg: #000000;
+  --c-muted: #f2f2f2;
+  --c-accent: #ff3000;
+  --c-border: #000000;
+
+  /* Inverted surface pair (black bands, CTA strips) */
+  --c-bg-invert: #000000;
+  --c-fg-invert: #ffffff;
+
+  /* --- Structure ----------------------------------------------------------
+     Borders are the visible skeleton of the grid. Never thinner on mobile. */
+  --bd-thick: 4px;
+  --bd: 2px;
+  --bd-hair: 1px;
+  --radius: 0;
+
+  /* --- Typography ---------------------------------------------------------
+     Grotesque sans only. Weights carry the hierarchy, not colour. */
+  --font-sans: 'Inter', 'Inter var', 'Helvetica Neue', Helvetica, Arial,
+    'Segoe UI', sans-serif;
+  --font-mono: 'Inter', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+
+  --w-regular: 400;
+  --w-medium: 500;
+  --w-bold: 700;
+  --w-black: 900;
+
+  /* Fluid mathematical scale. Viewport range 360px -> 1600px.
+     Extreme contrast between display and body is intentional. */
+  --step--2: 0.6875rem;                                   /* 11px  micro label */
+  --step--1: 0.8125rem;                                   /* 13px  label       */
+  --step-0: clamp(0.9375rem, 0.9rem + 0.16vw, 1.0625rem); /* body              */
+  --step-1: clamp(1.125rem, 1.05rem + 0.32vw, 1.375rem);  /* lead              */
+  --step-2: clamp(1.375rem, 1.2rem + 0.78vw, 2rem);       /* sub-heading       */
+  --step-3: clamp(1.75rem, 1.35rem + 1.78vw, 3rem);       /* quiet heading     */
+  --step-4: clamp(2.25rem, 1.6rem + 2.9vw, 4.5rem);       /* section heading   */
+  --step-5: clamp(3rem, 1.9rem + 4.9vw, 6.5rem);          /* product title     */
+  --step-6: clamp(3rem, 0.4rem + 8.2vw, 9rem);            /* display           */
+  /* Tuned so the longest word in the slogan ('Decentralizing') always fits
+     the full measure, from a 360px phone up to the 1600px container. */
+  --step-7: clamp(2.5rem, 0.1rem + 9.4vw, 10rem);         /* hero              */
+
+  /* Tracking */
+  --tr-tighter: -0.045em;
+  --tr-tight: -0.02em;
+  --tr-none: 0;
+  --tr-wide: 0.08em;
+  --tr-widest: 0.18em;
+
+  /* Leading */
+  --lh-display: 0.86;
+  --lh-tight: 1.02;
+  --lh-heading: 1.1;
+  --lh-body: 1.55;
+
+  /* --- Space --------------------------------------------------------------
+     4px base unit. Dense inside information clusters, spacious between them. */
+  --s-1: 0.25rem;   /* 4   */
+  --s-2: 0.5rem;    /* 8   */
+  --s-3: 0.75rem;   /* 12  */
+  --s-4: 1rem;      /* 16  */
+  --s-5: 1.5rem;    /* 24  */
+  --s-6: 2rem;      /* 32  */
+  --s-7: 3rem;      /* 48  */
+  --s-8: 4rem;      /* 64  */
+  --s-9: 6rem;      /* 96  */
+  --s-10: 8rem;     /* 128 */
+  --s-11: 12rem;    /* 192 */
+
+  /* Padding for bordered containers — generous and uniform. */
+  --pad-card: clamp(1.5rem, 1.1rem + 1.8vw, 3rem);
+  --pad-section: clamp(3rem, 1.8rem + 5.3vw, 7rem);
+
+  /* --- Layout -------------------------------------------------------------- */
+  --container: 1600px;
+  --gutter: clamp(1rem, 0.55rem + 2vw, 4rem);
+  --header-h: 4.5rem;
+
+  /* --- Motion --------------------------------------------------------------
+     Mechanical and instant. No spring, no elastic, no easing drama. */
+  --dur-fast: 150ms;
+  --dur: 200ms;
+  --ease: cubic-bezier(0, 0, 0.2, 1);
+  --ease-linear: linear;
+
+  /* --- Effects -------------------------------------------------------------
+     The design is flat. The only permitted "shadow" is a compositional ring
+     used on geometric accents, never on content surfaces. */
+  --ring-accent: 0 0 0 0.5rem rgba(255, 48, 0, 0.1);
+  --focus-ring: var(--bd) solid var(--c-accent);
+  --focus-offset: var(--bd);
+
+  /* --- Texture opacity -----------------------------------------------------
+     Patterns provide depth in place of shadows. They must never dominate. */
+  --op-grid: 0.03;
+  --op-dots: 0.04;
+  --op-diagonal: 0.02;
+  --op-noise: 0.015;
+
+  --size-grid: 24px;
+  --size-dots: 16px;
+  --size-diagonal: 10px;
+
+  /* --- Z-index ------------------------------------------------------------- */
+  --z-noise: 1;
+  --z-header: 100;
+  --z-nav-panel: 90;
+  --z-skip: 200;
+}

@@ -1,0 +1,206 @@
+/* ==========================================================================
+   BLOCKCORE — LAYOUT
+   The grid is the authority. Structure is declared here and nowhere else.
+   ========================================================================== */
+
+/* --- Shell ----------------------------------------------------------------
+   Content is constrained; rules and borders run full-bleed so the module
+   reads as architecture rather than as a floating card. */
+.shell {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.shell--flush {
+  padding-inline: 0;
+}
+
+/* --- Sections -------------------------------------------------------------- */
+.section {
+  position: relative;
+  border-top: var(--bd-thick) solid var(--c-border);
+}
+
+.section__inner {
+  padding-block: var(--pad-section);
+}
+
+.section--muted {
+  background-color: var(--c-muted);
+}
+
+.section--invert {
+  background-color: var(--c-bg-invert);
+  color: var(--c-fg-invert);
+  border-color: var(--c-border);
+}
+
+.section--tight .section__inner {
+  padding-block: var(--s-7);
+}
+
+/* The first section sits directly beneath the header's own rule. */
+.section--flush-top {
+  border-top: none;
+}
+
+/* --- 12 column grid -------------------------------------------------------
+   Gap is zero by default: adjacent cells are separated by their own borders,
+   which keeps the module lines continuous. */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--grid-gap, 0);
+}
+
+/* Gutters are per-column, so they are kept modest: eleven of them sit inside
+   every full-width row and would otherwise devour the measure. */
+.grid--gap {
+  --grid-gap: var(--s-5);
+}
+
+.grid--gap-lg {
+  --grid-gap: var(--s-6);
+}
+
+/* Mobile first: every cell is full width until the layout can breathe.
+   Only `grid-column-end` is set so that the span composes with an explicit
+   `grid-column-start` — setting the `grid-column` shorthand would reset the
+   end line back to `auto` and collapse the cell to a single track. */
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-12 {
+  grid-column-end: span 12;
+}
+
+@media (min-width: 48em) {
+  .col-3 { grid-column-end: span 6; }
+  .col-4 { grid-column-end: span 6; }
+  .col-5 { grid-column-end: span 6; }
+  .col-6 { grid-column-end: span 6; }
+  .col-7 { grid-column-end: span 6; }
+  .col-8 { grid-column-end: span 6; }
+  .col-9 { grid-column-end: span 6; }
+}
+
+/* Asymmetry only becomes real at desktop, where 8:4 / 7:5 / 5:7 ratios
+   create the intended visual tension. */
+@media (min-width: 64em) {
+  .col-3 { grid-column-end: span 3; }
+  .col-4 { grid-column-end: span 4; }
+  .col-5 { grid-column-end: span 5; }
+  .col-6 { grid-column-end: span 6; }
+  .col-7 { grid-column-end: span 7; }
+  .col-8 { grid-column-end: span 8; }
+  .col-9 { grid-column-end: span 9; }
+
+  .col-start-2 { grid-column-start: 2; }
+  .col-start-6 { grid-column-start: 6; }
+  .col-start-8 { grid-column-start: 8; }
+  .col-start-9 { grid-column-start: 9; }
+
+  /* Visual order swap for the mirrored product block: on small screens the
+     narrative must still read before the supporting composition. */
+  .order-first-lg { order: -1; }
+}
+
+/* --- Rules ---------------------------------------------------------------- */
+.rule {
+  border-top: var(--bd-thick) solid var(--c-border);
+}
+
+.rule--hair {
+  border-top-width: var(--bd);
+}
+
+.rule--accent {
+  border-top-color: var(--c-accent);
+}
+
+/* --- Stacks ---------------------------------------------------------------- */
+.stack > * + * {
+  margin-top: var(--stack-space, var(--s-5));
+}
+
+.stack--xs { --stack-space: var(--s-2); }
+.stack--sm { --stack-space: var(--s-3); }
+.stack--lg { --stack-space: var(--s-7); }
+.stack--xl { --stack-space: var(--s-8); }
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-4);
+  align-items: center;
+}
+
+.cluster--between {
+  justify-content: space-between;
+}
+
+.cluster--sm {
+  gap: var(--s-3);
+}
+
+/* Pushes a trailing item to the far end of a flex row. */
+.push-end {
+  margin-left: auto;
+}
+
+.measure-short {
+  max-width: 14ch;
+}
+
+/* --- Bordered cell strips -------------------------------------------------
+   A row of cells divided by single rules rather than gaps: dense information
+   clusters in the manner of a timetable. */
+.cells {
+  display: grid;
+  grid-template-columns: repeat(var(--cells, 1), minmax(0, 1fr));
+  border-top: var(--bd) solid var(--c-border);
+  border-left: var(--bd) solid var(--c-border);
+}
+
+.cells > * {
+  border-right: var(--bd) solid var(--c-border);
+  border-bottom: var(--bd) solid var(--c-border);
+}
+
+@media (min-width: 40em) {
+  .cells--2\@sm { --cells: 2; }
+}
+
+@media (min-width: 48em) {
+  .cells--3\@md { --cells: 3; }
+  .cells--2\@md { --cells: 2; }
+}
+
+@media (min-width: 64em) {
+  .cells--4\@lg { --cells: 4; }
+  .cells--3\@lg { --cells: 3; }
+}
+
+/* --- Utilities ------------------------------------------------------------- */
+.flow-end {
+  margin-top: auto;
+}
+
+.full-height {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+@media (min-width: 64em) {
+  .sticky-lg {
+    position: sticky;
+    top: calc(var(--header-h) + var(--s-6));
+  }
+}

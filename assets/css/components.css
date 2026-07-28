@@ -1,0 +1,837 @@
+/* ==========================================================================
+   BLOCKCORE — COMPONENTS
+   Reusable parts only. Sections compose these; they never invent one-off
+   styles of their own.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   HEADER / NAVIGATION
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  background-color: var(--c-bg);
+  border-bottom: var(--bd) solid var(--c-border);
+  transition: border-bottom-width var(--dur-fast) var(--ease-linear);
+}
+
+/* Structure asserts itself once the page is in motion — thickness, not shadow. */
+.site-header.is-scrolled {
+  border-bottom-width: var(--bd-thick);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-5);
+  min-height: var(--header-h);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  padding-block: var(--s-3);
+}
+
+.brand__mark {
+  width: auto;
+  height: 1.5rem;
+}
+
+.brand__slogan {
+  display: none;
+  padding-left: var(--s-3);
+  border-left: var(--bd) solid var(--c-border);
+  color: var(--c-accent);
+}
+
+@media (min-width: 64em) {
+  .brand__slogan {
+    display: block;
+  }
+}
+
+.nav {
+  display: none;
+  align-items: center;
+  gap: var(--s-6);
+}
+
+@media (min-width: 64em) {
+  .nav {
+    display: flex;
+  }
+}
+
+/* Vertical slide: the label steps up and a red duplicate steps in behind it.
+   Mechanical, immediate, and legible as feedback without a colour fade.
+   The anchor keeps a 44px target while the mask stays at text height, so the
+   sliding duplicate is never revealed above or below the word. */
+.nav__link {
+  display: flex;
+  align-items: center;
+  min-height: 2.75rem;
+}
+
+.nav__link-mask {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  height: 1.2em;
+}
+
+.nav__link-mask > span {
+  display: block;
+  transition: transform var(--dur) var(--ease);
+}
+
+.nav__link-mask > span:last-child {
+  position: absolute;
+  inset: 0;
+  color: var(--c-accent);
+  transform: translateY(100%);
+}
+
+.nav__link:hover .nav__link-mask > span:first-child,
+.nav__link:focus-visible .nav__link-mask > span:first-child {
+  transform: translateY(-100%);
+}
+
+.nav__link:hover .nav__link-mask > span:last-child,
+.nav__link:focus-visible .nav__link-mask > span:last-child {
+  transform: translateY(0);
+}
+
+.nav-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  min-height: 2.75rem;
+  padding: var(--s-2) var(--s-3);
+  margin-right: calc(var(--s-3) * -1);
+}
+
+@media (min-width: 64em) {
+  .nav-toggle {
+    display: none;
+  }
+}
+
+.nav-toggle__bars {
+  display: grid;
+  gap: 4px;
+  width: 1.25rem;
+}
+
+.nav-toggle__bars i {
+  display: block;
+  height: var(--bd);
+  background-color: var(--c-fg);
+  transition: transform var(--dur) var(--ease), opacity var(--dur-fast) var(--ease-linear);
+}
+
+.nav-toggle[aria-expanded='true'] .nav-toggle__bars i:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded='true'] .nav-toggle__bars i:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded='true'] .nav-toggle__bars i:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.nav-panel {
+  display: none;
+  border-top: var(--bd) solid var(--c-border);
+  background-color: var(--c-bg);
+}
+
+.nav-panel.is-open {
+  display: block;
+}
+
+@media (min-width: 64em) {
+  .nav-panel,
+  .nav-panel.is-open {
+    display: none;
+  }
+}
+
+.nav-panel__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 3.5rem;
+  padding-block: var(--s-3);
+  border-bottom: var(--bd) solid var(--c-border);
+  font-size: var(--step-2);
+  font-weight: var(--w-black);
+  letter-spacing: var(--tr-tight);
+  text-transform: uppercase;
+  transition: color var(--dur-fast) var(--ease-linear);
+}
+
+.nav-panel__link:hover {
+  color: var(--c-accent);
+}
+
+.nav-panel__cta {
+  padding-block: var(--s-5);
+}
+
+/* --------------------------------------------------------------------------
+   BUTTONS
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-5);
+  min-height: 3.5rem;
+  padding: var(--s-3) var(--s-5);
+  border: var(--bd) solid var(--c-border);
+  border-radius: var(--radius);
+  font-size: var(--step--1);
+  font-weight: var(--w-bold);
+  letter-spacing: var(--tr-widest);
+  text-transform: uppercase;
+  transition:
+    background-color var(--dur-fast) var(--ease-linear),
+    color var(--dur-fast) var(--ease-linear),
+    border-color var(--dur-fast) var(--ease-linear);
+}
+
+.btn svg {
+  width: 1.125rem;
+  height: 1.125rem;
+  transition: transform var(--dur) var(--ease);
+}
+
+.btn:hover svg[data-arrow] {
+  transform: translate(2px, -2px);
+}
+
+.btn--primary {
+  background-color: var(--c-fg);
+  color: var(--c-fg-invert);
+}
+
+.btn--primary:hover,
+.btn--primary:focus-visible {
+  background-color: var(--c-accent);
+  border-color: var(--c-accent);
+}
+
+.btn--secondary {
+  background-color: transparent;
+  color: var(--c-fg);
+}
+
+.btn--secondary:hover,
+.btn--secondary:focus-visible {
+  background-color: var(--c-fg);
+  color: var(--c-fg-invert);
+}
+
+.btn--accent {
+  background-color: var(--c-accent);
+  border-color: var(--c-accent);
+  color: var(--c-fg-invert);
+}
+
+.btn--accent:hover,
+.btn--accent:focus-visible {
+  background-color: var(--c-fg);
+  border-color: var(--c-fg);
+}
+
+/* For use on the inverted (black) band. */
+.btn--onDark {
+  background-color: transparent;
+  border-color: var(--c-fg-invert);
+  color: var(--c-fg-invert);
+}
+
+.btn--onDark:hover,
+.btn--onDark:focus-visible {
+  background-color: var(--c-fg-invert);
+  color: var(--c-fg);
+}
+
+.btn--block {
+  display: flex;
+  width: 100%;
+}
+
+@media (min-width: 40em) {
+  .btn--block {
+    display: inline-flex;
+    width: auto;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   TEXT LINK — rule slides in beneath, no colour fade
+   -------------------------------------------------------------------------- */
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  padding-bottom: var(--s-1);
+  border-bottom: var(--bd) solid var(--c-border);
+  font-weight: var(--w-bold);
+  transition: color var(--dur-fast) var(--ease-linear),
+    border-color var(--dur-fast) var(--ease-linear);
+}
+
+.text-link svg {
+  width: 1rem;
+  height: 1rem;
+  transition: transform var(--dur) var(--ease);
+}
+
+.text-link:hover,
+.text-link:focus-visible {
+  color: var(--c-accent);
+  border-color: var(--c-accent);
+}
+
+.text-link:hover svg {
+  transform: translate(2px, -2px);
+}
+
+/* --------------------------------------------------------------------------
+   SECTION LABEL — numbered prefix in the accent signal colour
+   -------------------------------------------------------------------------- */
+.section-label {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-3);
+  padding-bottom: var(--s-4);
+  border-bottom: var(--bd) solid var(--c-border);
+  margin-bottom: var(--s-7);
+}
+
+.section-label__num {
+  color: var(--c-accent);
+}
+
+.section--invert .section-label {
+  border-color: var(--c-fg-invert);
+}
+
+/* --------------------------------------------------------------------------
+   TAG — a small hard-edged status marker
+   -------------------------------------------------------------------------- */
+.tag {
+  display: inline-block;
+  padding: var(--s-1) var(--s-3);
+  border: var(--bd) solid var(--c-border);
+  font-size: var(--step--2);
+  font-weight: var(--w-bold);
+  letter-spacing: var(--tr-widest);
+  text-transform: uppercase;
+}
+
+.tag--accent {
+  background-color: var(--c-accent);
+  border-color: var(--c-accent);
+  color: var(--c-fg-invert);
+}
+
+.tag--solid {
+  background-color: var(--c-fg);
+  color: var(--c-fg-invert);
+}
+
+/* --------------------------------------------------------------------------
+   MARQUEE — a black band of continuous statement
+   -------------------------------------------------------------------------- */
+.marquee {
+  display: flex;
+  overflow: hidden;
+  background-color: var(--c-bg-invert);
+  color: var(--c-fg-invert);
+  border-block: var(--bd-thick) solid var(--c-border);
+  user-select: none;
+}
+
+.marquee__track {
+  display: flex;
+  flex: none;
+  gap: var(--s-6);
+  padding: var(--s-4) 0;
+  padding-right: var(--s-6);
+  white-space: nowrap;
+  animation: marquee 40s linear infinite;
+}
+
+.marquee__track span {
+  display: flex;
+  align-items: center;
+  gap: var(--s-6);
+  font-size: var(--step--1);
+  font-weight: var(--w-bold);
+  letter-spacing: var(--tr-widest);
+  text-transform: uppercase;
+}
+
+.marquee__track span::after {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--c-accent);
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track {
+    animation: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   CARD — defined by its border; inverts wholesale on hover
+   -------------------------------------------------------------------------- */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+  padding: var(--pad-card);
+  background-color: var(--c-bg);
+  transition:
+    background-color var(--dur-fast) var(--ease-linear),
+    color var(--dur-fast) var(--ease-linear);
+}
+
+.card__index {
+  font-size: var(--step--1);
+  font-weight: var(--w-black);
+  letter-spacing: var(--tr-widest);
+  color: var(--c-accent);
+  transition: color var(--dur-fast) var(--ease-linear);
+}
+
+.card__icon {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: var(--bd) solid currentColor;
+}
+
+.card__icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.card--interactive:hover,
+.card--interactive:focus-within {
+  background-color: var(--c-accent);
+  color: var(--c-fg-invert);
+}
+
+.card--interactive:hover .card__index,
+.card--interactive:focus-within .card__index {
+  color: var(--c-fg-invert);
+}
+
+.card--muted {
+  background-color: var(--c-muted);
+}
+
+/* --------------------------------------------------------------------------
+   PRODUCT FEATURE BLOCK
+   -------------------------------------------------------------------------- */
+.feature {
+  padding-block: var(--pad-section);
+  border-top: var(--bd) solid var(--c-border);
+}
+
+.feature:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.feature__index {
+  font-size: var(--step-4);
+  font-weight: var(--w-black);
+  line-height: 1;
+  letter-spacing: var(--tr-tighter);
+  color: var(--c-accent);
+}
+
+.feature__title {
+  font-size: var(--step-5);
+  line-height: var(--lh-display);
+  letter-spacing: var(--tr-tighter);
+}
+
+.feature__subtitle {
+  font-size: var(--step-2);
+  font-weight: var(--w-bold);
+  letter-spacing: var(--tr-tight);
+  text-transform: uppercase;
+}
+
+.feature__points {
+  display: grid;
+  gap: 0;
+  border-top: var(--bd) solid var(--c-border);
+}
+
+.feature__point {
+  display: grid;
+  gap: var(--s-2);
+  padding-block: var(--s-5);
+  border-bottom: var(--bd) solid var(--c-border);
+}
+
+.feature__point dt {
+  font-size: var(--step--1);
+  font-weight: var(--w-black);
+  letter-spacing: var(--tr-wide);
+  text-transform: uppercase;
+}
+
+.feature__point dd {
+  max-width: 48ch;
+  opacity: 0.75;
+}
+
+/* --------------------------------------------------------------------------
+   GEOMETRIC COMPOSITION — Bauhaus arrangement of primitives.
+   Purely decorative: hidden from assistive technology.
+   -------------------------------------------------------------------------- */
+.composition {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border: var(--bd-thick) solid var(--c-border);
+  overflow: hidden;
+}
+
+.composition__shape {
+  position: absolute;
+}
+
+.shape--square-solid {
+  inset: 12% auto auto 10%;
+  width: 34%;
+  aspect-ratio: 1;
+  background-color: var(--c-fg);
+}
+
+.shape--circle-accent {
+  inset: 8% 14% auto auto;
+  width: 26%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--c-accent);
+  box-shadow: var(--ring-accent);
+}
+
+.shape--circle-outline {
+  inset: auto auto 12% 22%;
+  width: 44%;
+  aspect-ratio: 1;
+  border: var(--bd-thick) solid var(--c-border);
+  border-radius: 50%;
+}
+
+.shape--bar {
+  inset: auto 0 32% auto;
+  width: 46%;
+  height: var(--bd-thick);
+  background-color: var(--c-fg);
+}
+
+.shape--bar-accent {
+  inset: auto 0 26% auto;
+  width: 28%;
+  height: var(--bd-thick);
+  background-color: var(--c-accent);
+}
+
+.shape--quarter {
+  inset: auto 8% 8% auto;
+  width: 30%;
+  aspect-ratio: 1;
+  border: var(--bd-thick) solid var(--c-border);
+  border-radius: 100% 0 0 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+.shape--rule-v {
+  inset: 0 auto 0 66%;
+  width: var(--bd);
+  background-color: var(--c-fg);
+  opacity: 0.15;
+}
+
+/* --------------------------------------------------------------------------
+   SPEC LIST — dense information cluster, read as a timetable
+   -------------------------------------------------------------------------- */
+.spec {
+  border-top: var(--bd) solid var(--c-border);
+}
+
+.spec__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--s-1);
+  padding-block: var(--s-4);
+  border-bottom: var(--bd) solid var(--c-border);
+}
+
+@media (min-width: 40em) {
+  .spec__row {
+    grid-template-columns: 12rem minmax(0, 1fr);
+    gap: var(--s-5);
+    align-items: baseline;
+  }
+}
+
+.spec__term {
+  font-size: var(--step--1);
+  font-weight: var(--w-black);
+  letter-spacing: var(--tr-wide);
+  text-transform: uppercase;
+}
+
+.spec__desc {
+  font-size: var(--step--1);
+  opacity: 0.75;
+}
+
+/* --------------------------------------------------------------------------
+   INDEX STRIP — the page's table of contents, treated as architecture
+   -------------------------------------------------------------------------- */
+.index-strip {
+  margin-bottom: var(--s-8);
+}
+
+.index-strip li {
+  display: flex;
+}
+
+.index-strip a {
+  display: flex;
+  flex: 1;
+  align-items: baseline;
+  gap: var(--s-3);
+  min-height: 4rem;
+  padding: var(--s-4);
+  transition:
+    background-color var(--dur-fast) var(--ease-linear),
+    color var(--dur-fast) var(--ease-linear);
+}
+
+.index-strip__name {
+  font-size: var(--step-1);
+  font-weight: var(--w-black);
+  letter-spacing: var(--tr-tight);
+  text-transform: uppercase;
+}
+
+.index-strip a:hover,
+.index-strip a:focus-visible {
+  background-color: var(--c-fg);
+  color: var(--c-fg-invert);
+}
+
+/* Red on black would drop below the contrast floor: invert instead. */
+.index-strip a:hover .accent,
+.index-strip a:focus-visible .accent {
+  color: inherit;
+}
+
+/* --------------------------------------------------------------------------
+   STAT — black cell, snaps to red, number scales, plus rotates
+   -------------------------------------------------------------------------- */
+/* A 2px gap lets the white page show through as a hairline rule; a border
+   would be invisible black-on-black. */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--bd);
+}
+
+@media (min-width: 64em) {
+  .stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--s-7);
+  min-height: 11rem;
+  padding: var(--pad-card);
+  background-color: var(--c-bg-invert);
+  color: var(--c-fg-invert);
+  transition: background-color var(--dur-fast) var(--ease-linear);
+}
+
+.stat__value {
+  display: block;
+  font-size: var(--step-4);
+  font-weight: var(--w-black);
+  line-height: 1;
+  letter-spacing: var(--tr-tighter);
+  transform-origin: left bottom;
+  transition: transform var(--dur) var(--ease);
+}
+
+.stat__plus {
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: transform var(--dur) var(--ease);
+}
+
+.stat:hover {
+  background-color: var(--c-accent);
+}
+
+.stat:hover .stat__value {
+  transform: scale(1.05);
+}
+
+.stat:hover .stat__plus {
+  transform: rotate(90deg);
+}
+
+/* --------------------------------------------------------------------------
+   LINK LIST — footer and community columns
+   -------------------------------------------------------------------------- */
+.link-list {
+  display: grid;
+  gap: var(--s-3);
+}
+
+.link-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  min-height: 1.75rem;
+  transition: color var(--dur-fast) var(--ease-linear);
+}
+
+.link-list a:hover,
+.link-list a:focus-visible {
+  color: var(--c-accent);
+}
+
+.link-list svg {
+  width: 0.875rem;
+  height: 0.875rem;
+  opacity: 0;
+  transition: opacity var(--dur-fast) var(--ease-linear);
+}
+
+.link-list a:hover svg,
+.link-list a:focus-visible svg {
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   FOOTER
+   -------------------------------------------------------------------------- */
+.site-footer {
+  border-top: var(--bd-thick) solid var(--c-border);
+}
+
+.site-footer .brand__mark {
+  height: 2rem;
+}
+
+.site-footer__cols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s-7) var(--s-6);
+  padding-block: var(--s-8);
+}
+
+@media (min-width: 64em) {
+  .site-footer__cols {
+    grid-template-columns: 2fr repeat(3, 1fr);
+    gap: var(--s-8);
+  }
+}
+
+.site-footer__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+  padding-block: var(--s-5);
+  border-top: var(--bd) solid var(--c-border);
+}
+
+/* The bar sets small type, so the link needs extra padding to stay above the
+   24px minimum target size. */
+.site-footer__bar .text-link {
+  padding-block: var(--s-1);
+}
+
+.social {
+  display: flex;
+  gap: 0;
+  border: var(--bd) solid var(--c-border);
+  width: fit-content;
+}
+
+.social a {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-right: var(--bd) solid var(--c-border);
+  transition: background-color var(--dur-fast) var(--ease-linear),
+    color var(--dur-fast) var(--ease-linear);
+}
+
+.social a:last-child {
+  border-right: none;
+}
+
+.social a:hover,
+.social a:focus-visible {
+  background-color: var(--c-accent);
+  color: var(--c-fg-invert);
+}
+
+.social svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+/* --------------------------------------------------------------------------
+   ERROR PAGE
+   -------------------------------------------------------------------------- */
+.error {
+  display: grid;
+  align-content: center;
+  min-height: calc(100vh - var(--header-h) - 12rem);
+  padding-block: var(--s-9);
+}
+
+.error__code {
+  font-size: var(--step-7);
+  font-weight: var(--w-black);
+  line-height: var(--lh-display);
+  letter-spacing: var(--tr-tighter);
+  color: var(--c-accent);
+}

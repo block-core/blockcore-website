@@ -221,16 +221,21 @@
               </div>
             </div>
 
-            <!-- Bauhaus composition: a structural counterweight to the headline.
-                 Decorative, therefore hidden from assistive technology. -->
+            <!-- Decorative counterweight to the headline. It illustrates the
+                 idea the copy already states, so it carries an empty alt and
+                 stays out of the accessibility tree. Eager, high priority: it
+                 is above the fold. -->
             <div class="col-4 col-start-9">
-              <div class="composition p-grid" aria-hidden="true">
-                <span class="composition__shape shape--square-solid"></span>
-                <span class="composition__shape shape--circle-accent"></span>
-                <span class="composition__shape shape--circle-outline"></span>
-                <span class="composition__shape shape--bar"></span>
-                <span class="composition__shape shape--rule-v"></span>
-              </div>
+              <figure class="shot">
+                <img
+                  src="assets/img/hero.jpg"
+                  width="960"
+                  height="960"
+                  fetchpriority="high"
+                  decoding="async"
+                  alt=""
+                />
+              </figure>
             </div>
           </div>
         </div>
@@ -337,8 +342,8 @@
               <figure class="shot sticky-lg">
                 <img
                   src="assets/img/angor-social.jpg"
-                  width="1280"
-                  height="640"
+                  width="1024"
+                  height="1024"
                   loading="lazy"
                   decoding="async"
                   alt="Angor Hub — a central place for discovering and investing in Bitcoin projects."
@@ -411,8 +416,8 @@
               <figure class="shot sticky-lg">
                 <img
                   src="assets/img/nostria-social.jpg"
-                  width="1280"
-                  height="640"
+                  width="1024"
+                  height="1024"
                   loading="lazy"
                   decoding="async"
                   alt="Nostria — your social network, built for human connections. See your friends again."

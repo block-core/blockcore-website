@@ -36,19 +36,6 @@
     });
   }
 
-  /* --- Header state -------------------------------------------------------
-     The rule thickens once the page is in motion. Structure, not shadow. */
-  var header = document.querySelector('.site-header');
-
-  if (header) {
-    var updateHeader = function () {
-      header.classList.toggle('is-scrolled', window.scrollY > 8);
-    };
-
-    updateHeader();
-    window.addEventListener('scroll', updateHeader, { passive: true });
-  }
-
   /* --- Scroll reveal ------------------------------------------------------ */
   var revealables = document.querySelectorAll('[data-reveal]');
 

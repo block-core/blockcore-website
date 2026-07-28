@@ -58,6 +58,10 @@
   </head>
 
   <body>
+    <!-- Scroll target for "back to top". It must not live on .site-header:
+         a sticky header is already parked at the top of the viewport, so the
+         browser considers it in view and refuses to scroll. -->
+    <span id="top" tabindex="-1"></span>
     <a class="skip-link" href="#main">Skip to content</a>
 
     <!-- Icon sprite. Lucide (ISC) plus the X wordmark. Referenced via <use>. -->
@@ -107,7 +111,7 @@
     <!-- ================================================================
          HEADER
          ================================================================ -->
-    <header class="site-header" id="top">
+    <header class="site-header">
       <div class="shell site-header__inner">
         <a class="brand" href="#top" aria-label="Blockcore — home">
           <img

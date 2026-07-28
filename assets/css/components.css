@@ -12,13 +12,7 @@
   top: 0;
   z-index: var(--z-header);
   background-color: var(--c-bg);
-  border-bottom: var(--bd) solid var(--c-border);
-  transition: border-bottom-width var(--dur-fast) var(--ease-linear);
-}
-
-/* Structure asserts itself once the page is in motion — thickness, not shadow. */
-.site-header.is-scrolled {
-  border-bottom-width: var(--bd-thick);
+  border-bottom: var(--bd-thick) solid var(--c-border);
 }
 
 .site-header__inner {

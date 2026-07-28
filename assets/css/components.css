@@ -503,6 +503,24 @@
 }
 
 /* --------------------------------------------------------------------------
+   PRODUCT SHOT — a framed image. The frame is the same 4px rule used
+   everywhere else, so third-party artwork sits inside our structure rather
+   than floating on the page. No crop: these images carry their own type.
+   -------------------------------------------------------------------------- */
+.shot {
+  margin: 0;
+  border: var(--bd-thick) solid var(--c-border);
+  background-color: var(--c-muted);
+  line-height: 0;
+}
+
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* --------------------------------------------------------------------------
    GEOMETRIC COMPOSITION — Bauhaus arrangement of primitives.
    Purely decorative: hidden from assistive technology.
    -------------------------------------------------------------------------- */
